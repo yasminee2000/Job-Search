@@ -13,34 +13,22 @@
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding-bottom: 90px; }
-
-/* Header */
 .hdr { background: var(--dark); color: #fff; padding: 13px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
 .hdr h1 { font-size: 16px; font-weight: 700; }
 .hdr-right { text-align: right; }
 .hdr-date { font-size: 11px; color: #a0a0b0; }
 .streak { font-size: 12px; font-weight: 700; color: #FFD700; }
-
-/* Nav */
 .nav { background: #fff; display: flex; border-bottom: 1px solid #eee; overflow-x: auto; scrollbar-width: none; position: sticky; top: 48px; z-index: 99; }
 .nav::-webkit-scrollbar { display: none; }
 .nb { padding: 11px 13px; font-size: 12.5px; font-weight: 600; color: #999; border: none; background: none; cursor: pointer; white-space: nowrap; border-bottom: 2.5px solid transparent; flex-shrink: 0; }
 .nb.active { color: var(--dark); border-bottom-color: var(--dark); }
-
-/* Pages */
 .page { display: none; padding: 13px 13px 0; max-width: 680px; margin: 0 auto; }
 .page.active { display: block; }
-
-/* Cards */
 .card { background: #fff; border-radius: 14px; padding: 15px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,.07); }
-
-/* Summary */
 .sum-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; margin-bottom: 12px; }
 .sum-box { background: #fff; border-radius: 12px; padding: 12px 7px; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.07); }
 .sum-n { font-size: 24px; font-weight: 800; display: block; }
 .sum-l { font-size: 10px; color: var(--muted); margin-top: 2px; text-transform: uppercase; letter-spacing: .3px; line-height: 1.3; }
-
-/* Region */
 .rh { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .rt { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; }
 .rc { font-size: 14px; font-weight: 800; }
@@ -50,8 +38,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .pl span:last-child { font-weight: 700; }
 .pt { height: 8px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
 .pf { height: 100%; border-radius: 4px; transition: width .5s cubic-bezier(.4,0,.2,1); }
-
-/* App items */
 .ai { border-bottom: 1px solid #f2f2f2; padding: 11px 0; display: flex; gap: 10px; align-items: flex-start; }
 .ai:last-child { border-bottom: none; }
 .rdot { width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
@@ -69,8 +55,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .ib { font-size: 11px; color: #6C63FF; background: none; border: none; cursor: pointer; padding: 0; font-weight: 600; }
 .db { font-size: 11px; color: #ccc; background: none; border: none; cursor: pointer; padding: 0; }
 .db:hover { color: #c00; }
-
-/* Stage pills */
 .stage-track { margin-top: 7px; display: flex; flex-wrap: wrap; gap: 5px; }
 .stage-pill { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; border: 1.5px solid #e0e0e0; color: #555; background: #fff; cursor: pointer; }
 .stage-pill.passed { background: #E6F9EE; border-color: #B0DFC0; color: #1A7A42; }
@@ -78,8 +62,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .stage-pill.awaiting { background: #F0EEFF; border-color: #C8C2FF; color: #5750D4; }
 .stage-pill.rejected { background: #FDECEC; border-color: #F0BABA; color: #B83030; }
 .stage-add { font-size: 11px; color: #aaa; background: none; border: 1.5px dashed #ddd; border-radius: 20px; padding: 3px 9px; cursor: pointer; }
-
-/* Follow-up */
 .fu { background: #FFFBF0; border: 1px solid #F5D78E; border-radius: 10px; padding: 11px; margin-bottom: 9px; }
 .fu-t { font-weight: 600; font-size: 13px; }
 .fu-m { font-size: 11.5px; color: #777; margin-top: 2px; }
@@ -88,8 +70,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .fu-btn { padding: 5px 11px; border-radius: 7px; font-size: 12px; font-weight: 600; cursor: pointer; border: none; }
 .fu-do { background: #FF6B35; color: #fff; }
 .fu-cl { background: #f0f0f0; color: #666; }
-
-/* Outreach */
 .or-item { border-bottom: 1px solid #f2f2f2; padding: 11px 0; }
 .or-item:last-child { border-bottom: none; }
 .or-name { font-weight: 600; font-size: 13.5px; }
@@ -100,8 +80,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .os-Meeting { background: #FFF3E0; color: #C06820; }
 .os-NoResponse { background: #f0f0f0; color: #888; }
 .os-Closed { background: #FDECEC; color: #B83030; }
-
-/* Stats daily table */
 .day-row { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
 .day-row:last-child { border-bottom: none; }
 .day-label { width: 90px; color: #555; flex-shrink: 0; }
@@ -109,27 +87,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .day-bar { height: 100%; border-radius: 4px; transition: width .4s; }
 .day-count { width: 50px; text-align: right; font-weight: 700; flex-shrink: 0; }
 .day-tick { width: 18px; flex-shrink: 0; font-size: 14px; }
-
-/* Stats grid */
 .sg { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-bottom: 13px; }
 .sc { background: #fff; border-radius: 12px; padding: 13px; box-shadow: 0 1px 4px rgba(0,0,0,.07); }
 .sc-n { font-size: 26px; font-weight: 800; }
 .sc-l { font-size: 11px; color: var(--muted); margin-top: 1px; }
-
-/* Filter chips */
 .fr { display: flex; gap: 7px; margin-bottom: 11px; flex-wrap: wrap; }
 .fc { padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; border: 1.5px solid #e0e0e0; background: #fff; cursor: pointer; color: #666; }
 .fc.active { background: var(--dark); color: #fff; border-color: var(--dark); }
-
-/* Settings */
 .set-t { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .7px; color: #bbb; margin-bottom: 11px; }
 .sr { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #f5f5f5; }
 .sr:last-child { border-bottom: none; }
 .sn { font-size: 13.5px; font-weight: 500; }
 .si { width: 62px; padding: 6px 10px; border: 1.5px solid #e5e5e5; border-radius: 8px; font-size: 14px; text-align: center; font-weight: 600; outline: none; }
 .si:focus { border-color: var(--dark); }
-
-/* Modals */
 .ov { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 300; display: none; align-items: flex-end; justify-content: center; }
 .ov.open { display: flex; }
 .modal { background: #fff; border-radius: 22px 22px 0 0; padding: 20px 16px 34px; width: 100%; max-width: 680px; max-height: 92vh; overflow-y: auto; }
@@ -146,8 +116,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .data-btns { display: flex; gap: 9px; }
 .data-btn { flex: 1; padding: 11px; background: #f4f4f4; border: none; border-radius: 10px; font-size: 12.5px; font-weight: 600; cursor: pointer; color: var(--text); }
 .tip-box { background: #FFFBF0; border: 1px solid #F5D78E; border-radius: 10px; padding: 11px 13px; font-size: 13px; color: #7A5C00; line-height: 1.6; margin-bottom: 12px; }
-
-/* Job cards (Vacatures) */
 .jc { background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.07); }
 .jc-title { font-weight: 700; font-size: 14px; line-height: 1.3; }
 .jc-meta { font-size: 12px; color: var(--muted); margin-top: 3px; }
@@ -156,72 +124,42 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .jc-link { font-size: 12.5px; font-weight: 600; color: #6C63FF; text-decoration: none; padding: 6px 13px; border: 1.5px solid #C8C2FF; border-radius: 8px; }
 .jc-log { font-size: 12.5px; font-weight: 600; color: #fff; background: var(--dark); padding: 6px 13px; border: none; border-radius: 8px; cursor: pointer; }
 .jc-logged { font-size: 11px; color: #2ECC71; font-weight: 700; }
-
-/* Empty */
 .empty { text-align: center; padding: 28px 16px; color: var(--muted); }
 .ei { font-size: 32px; margin-bottom: 8px; }
 .et { font-size: 13.5px; line-height: 1.55; }
-
-/* Sync status */
 .sync-dot { font-size: 11px; font-weight: 700; margin-top: 3px; min-height: 14px; }
 .sync-ok  { color: #2ECC71; }
 .sync-ing { color: #F5A623; }
 .sync-err { color: #FF6B6B; }
-
-/* FAB */
 .fab { position: fixed; bottom: 22px; right: 16px; width: 58px; height: 58px; border-radius: 50%; background: var(--dark); color: #fff; font-size: 30px; border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,.3); display: flex; align-items: center; justify-content: center; z-index: 200; line-height: 1; }
-
-/* ── Bottom nav (mobile only) ── */
-.bnav {
-  display: none;
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  background: #fff;
-  border-top: 1px solid #e5e5e5;
-  z-index: 150;
-  padding-bottom: env(safe-area-inset-bottom, 0);
-}
+.bnav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #e5e5e5; z-index: 150; padding-bottom: env(safe-area-inset-bottom, 0); }
 .bnav-inner { display: flex; }
-.bn {
-  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 9px 4px 8px; border: none; background: none; cursor: pointer;
-  color: #bbb; font-size: 9.5px; font-weight: 600; letter-spacing: .3px; gap: 3px;
-  -webkit-tap-highlight-color: transparent;
-}
+.bn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 9px 4px 8px; border: none; background: none; cursor: pointer; color: #bbb; font-size: 9.5px; font-weight: 600; letter-spacing: .3px; gap: 3px; -webkit-tap-highlight-color: transparent; }
 .bn .bni { font-size: 20px; line-height: 1; }
 .bn.active { color: var(--dark); }
 .bn.active .bni { transform: scale(1.12); }
-
+/* Edit mode styles */
+.edit-plat-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #f5f5f5; }
+.edit-plat-row:last-child { border-bottom: none; }
 @media (max-width: 640px) {
-  /* Show bottom nav, hide top nav tabs */
   .nav { display: none; }
   .bnav { display: block; }
-  /* Allow bottom nav to scroll when 7 items */
   .bnav-inner { overflow-x: auto; scrollbar-width: none; }
   .bnav-inner::-webkit-scrollbar { display: none; }
   .bn { min-width: 52px; flex-shrink: 0; }
   body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
-  /* Larger touch targets */
   .nb, .btn-p, .btn-s { min-height: 48px; }
   .fab { width: 54px; height: 54px; font-size: 26px; bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
-  /* Page padding */
   .page { padding: 12px 12px 0; }
-  /* Cards */
   .card { border-radius: 12px; padding: 14px; }
-  /* Summary numbers */
   .sum-n { font-size: 22px; }
   .sum-l { font-size: 9.5px; }
-  /* App items easier to tap */
   .ai { padding: 13px 0; }
   .at { font-size: 14px; }
-  /* Modal full height on phone */
   .modal { border-radius: 20px 20px 0 0; padding: 18px 14px 40px; }
-  /* Stage pills wrap nicely */
   .stage-track { gap: 4px; }
-  /* Bigger status dropdowns */
   .ms { font-size: 12px; padding: 4px 6px; }
 }
-
 @media (max-width: 380px) { .sum-n { font-size: 19px; } .sum-l { font-size: 9px; } }
 </style>
 </head>
@@ -243,7 +181,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   <button class="nb" onclick="showPage('followups',this)">Follow-ups <span id="fu-badge"></span></button>
   <button class="nb" onclick="showPage('vacatures',this)">💼 Vacatures</button>
   <button class="nb" onclick="showPage('stats',this)">Stats</button>
-  <button class="nb" onclick="showPage('settings',this)">Targets</button>
 </div>
 
 <!-- TODAY -->
@@ -253,20 +190,53 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
     <div class="sum-box"><span class="sum-n" id="s-target" style="color:var(--muted)">—</span><span class="sum-l">Daily Target</span></div>
     <div class="sum-box"><span class="sum-n" id="s-week">0</span><span class="sum-l">This Week</span></div>
   </div>
-  <div class="card">
-    <div class="rh"><span class="rt" style="color:var(--dubai)">🇦🇪 Dubai</span><span class="rc" id="dub-c" style="color:var(--dubai)">0/—</span></div>
-    <div id="dub-bars"></div>
+
+  <!-- Edit button row -->
+  <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
+    <button onclick="toggleEditMode()" id="editPlatBtn"
+      style="font-size:12.5px;font-weight:600;background:#f0f0f0;border:none;border-radius:8px;padding:7px 14px;cursor:pointer;color:#555;">
+      ✏️ Platforms bewerken
+    </button>
   </div>
-  <div class="card">
-    <div class="rh"><span class="rt" style="color:var(--nl)">🇳🇱 Netherlands</span><span class="rc" id="nl-c" style="color:var(--nl)">0/—</span></div>
-    <div id="nl-bars"></div>
+
+  <!-- Edit panel -->
+  <div id="edit-platforms-panel" style="display:none;margin-bottom:4px;">
+    <div id="edit-platforms-content"></div>
+    <div style="display:flex;gap:9px;margin-top:2px;margin-bottom:12px;">
+      <button onclick="savePlatformsEdit()" class="btn-p" style="margin-top:0;flex:1;">💾 Opslaan</button>
+      <button onclick="cancelEditMode()" style="flex:0 0 auto;padding:13px 18px;background:#f0f0f0;color:var(--text);border:none;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;">Annuleren</button>
+    </div>
+    <!-- Cloud sync card in edit panel -->
+    <div class="card">
+      <div class="set-t">☁️ Cloud Sync</div>
+      <p style="font-size:12.5px;color:#555;line-height:1.6;margin-bottom:12px;">Gebruikt je <strong>GitHub account</strong> — geen nieuwe accounts nodig.</p>
+      <div class="fg">
+        <label class="fl">GitHub Personal Access Token</label>
+        <input class="fi" id="sync-token" type="password" placeholder="ghp_...">
+      </div>
+      <button class="btn-p" onclick="saveSyncConfig()" style="margin-top:4px">☁️ Verbinden &amp; Synchroniseren</button>
+      <div id="sync-config-msg" style="font-size:12.5px;min-height:16px;margin-top:9px;line-height:1.5;"></div>
+    </div>
+    <div style="height:4px"></div>
   </div>
-  <div class="card">
-    <div class="rh"><span class="rt" style="color:var(--remote)">🌍 Remote / Worldwide</span><span class="rc" id="rem-c" style="color:var(--remote)">0/—</span></div>
-    <div id="rem-bars"></div>
-  </div>
-  <div class="card" style="padding:12px 14px;">
-    <p style="font-size:12px;color:var(--muted);line-height:1.55"><strong style="color:var(--text)">Tip:</strong> Referrals and recruiter outreach are tracked separately and don't count toward your daily target — they're bonus activity. Check the <strong>Outreach</strong> tab to log direct emails you've sent.</p>
+
+  <!-- Normal view -->
+  <div id="today-regions">
+    <div class="card">
+      <div class="rh"><span class="rt" style="color:var(--dubai)">🇦🇪 Dubai</span><span class="rc" id="dub-c" style="color:var(--dubai)">0/—</span></div>
+      <div id="dub-bars"></div>
+    </div>
+    <div class="card">
+      <div class="rh"><span class="rt" style="color:var(--nl)">🇳🇱 Netherlands</span><span class="rc" id="nl-c" style="color:var(--nl)">0/—</span></div>
+      <div id="nl-bars"></div>
+    </div>
+    <div class="card">
+      <div class="rh"><span class="rt" style="color:var(--remote)">🌍 Remote</span><span class="rc" id="rem-c" style="color:var(--remote)">0/—</span></div>
+      <div id="rem-bars"></div>
+    </div>
+    <div class="card" style="padding:12px 14px;">
+      <p style="font-size:12px;color:var(--muted);line-height:1.55"><strong style="color:var(--text)">Tip:</strong> Referrals en recruiter outreach tellen niet mee voor je dagelijks doel. Log ze in het <strong>Outreach</strong> tabblad.</p>
+    </div>
   </div>
 </div>
 
@@ -318,23 +288,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 <div class="page" id="page-vacatures">
   <div class="tip-box" style="margin-bottom:12px">
     <strong>Verse vacatures</strong> — geen account of API key nodig.<br>
-    <span style="font-size:12px;margin-top:5px;display:block">Klik <strong>+ Log &amp; Solliciteer</strong> om een job direct in je tracker toe te voegen. Gebruik de <strong>zoeklinks</strong> hieronder voor Dubai &amp; NL platformen.</span>
+    <span style="font-size:12px;margin-top:5px;display:block">Klik <strong>+ Log &amp; Solliciteer</strong> om een job direct in je tracker toe te voegen.</span>
   </div>
-
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
     <span style="font-size:15px;font-weight:700;">🌍 Remote &amp; Europese vacatures</span>
     <button onclick="loadTodaysJobs(true)" style="font-size:12px;font-weight:600;background:var(--dark);color:#fff;border:none;border-radius:8px;padding:7px 13px;cursor:pointer;">🔄 Verversen</button>
   </div>
   <div id="vac-list"></div>
   <div id="vac-last-updated" style="font-size:11px;color:#bbb;text-align:center;padding:4px 0 12px;"></div>
-
-  <!-- Quick search links -->
   <div class="card" style="margin-top:4px;">
     <div class="set-t" style="margin-bottom:10px;">🔗 Snel zoeken — klik om te openen</div>
-
     <div style="font-size:12px;font-weight:700;color:var(--dubai);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;">🇦🇪 Dubai</div>
     <div id="vac-links-dubai" style="display:flex;flex-direction:column;gap:7px;margin-bottom:16px;"></div>
-
     <div style="font-size:12px;font-weight:700;color:var(--nl);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;">🇳🇱 Nederland</div>
     <div id="vac-links-nl" style="display:flex;flex-direction:column;gap:7px;"></div>
   </div>
@@ -344,24 +309,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 <!-- STATS -->
 <div class="page" id="page-stats">
   <div class="sg" id="stats-grid"></div>
-
   <div class="card">
     <div class="rh" style="margin-bottom:14px"><span style="font-weight:700;font-size:15px">Daily Activity (last 14 days)</span></div>
     <div id="daily-activity"></div>
   </div>
-
   <div class="card">
     <div class="rh" style="margin-bottom:12px"><span style="font-weight:700;font-size:15px">By Platform</span></div>
     <div id="stats-plat"></div>
   </div>
-
   <div class="card">
     <div class="set-t" style="margin-bottom:8px">Response Rate</div>
     <div id="response-rate" style="font-size:13px;color:#333;line-height:1.6;"></div>
   </div>
-
   <div class="card">
-    <div class="set-t" style="margin-bottom:10px">Data & Sync (phone ↔ laptop)</div>
+    <div class="set-t" style="margin-bottom:10px">Data (export / import)</div>
     <div class="data-btns">
       <button class="data-btn" onclick="exportData()">📤 Export</button>
       <button class="data-btn" onclick="document.getElementById('importFile').click()">📥 Import</button>
@@ -372,79 +333,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   </div>
 </div>
 
-<!-- SETTINGS -->
-<div class="page" id="page-settings">
-  <p style="font-size:13px;color:#555;margin-bottom:12px;line-height:1.5;">Daily targets per platform. Set to 0 to hide. Referral and Recruiter Outreach are tracked in the Outreach tab and have no daily target.</p>
-  <div class="card"><div class="set-t">🇦🇪 Dubai</div><div id="set-dubai"></div></div>
-  <div class="card"><div class="set-t">🇳🇱 Netherlands</div><div id="set-nl"></div></div>
-  <div class="card"><div class="set-t">🌍 Remote</div><div id="set-remote"></div></div>
-  <button class="btn-p" onclick="saveTargets()">Save Targets</button>
-
-  <!-- Cloud sync -->
-  <div class="card" style="margin-top:12px">
-    <div class="set-t">☁️ Cloud Sync — automatisch synchroniseren</div>
-    <p style="font-size:12.5px;color:#555;line-height:1.6;margin-bottom:12px">
-      Gebruikt je bestaande <strong>GitHub account</strong> — geen nieuwe accounts nodig. Maak eenmalig een token aan en vul het in op je laptop én telefoon.
-    </p>
-    <div class="fg">
-      <label class="fl">GitHub Personal Access Token</label>
-      <input class="fi" id="sync-token" type="password" placeholder="ghp_...">
-    </div>
-    <button class="btn-p" onclick="saveSyncConfig()" style="margin-top:4px">☁️ Verbinden &amp; Synchroniseren</button>
-    <div id="sync-config-msg" style="font-size:12.5px;min-height:16px;margin-top:9px;line-height:1.5;"></div>
-    <div style="margin-top:16px;padding-top:14px;border-top:1px solid #f0f0f0;">
-      <div class="set-t" style="margin-bottom:8px">Hoe maak je een token? (eenmalig, 2 minuten)</div>
-      <div style="font-size:12.5px;color:#444;line-height:1.9">
-        1. Ga naar <a href="https://github.com/settings/tokens/new" target="_blank" style="color:#6C63FF;font-weight:600">github.com/settings/tokens/new</a><br>
-        2. Geef het een naam, bijv. <em>job search sync</em><br>
-        3. Zet <strong>Expiration</strong> op <strong>No expiration</strong><br>
-        4. Vink <strong>repo</strong> aan (het bovenste vinkje in de lijst)<br>
-        5. Scroll naar beneden → klik <strong>Generate token</strong><br>
-        6. Kopieer het token (begint met <code style="background:#f0f0f0;padding:1px 5px;border-radius:4px">ghp_</code>)<br>
-        7. Plak het hierboven → klik <strong>Verbinden</strong><br>
-        8. Doe stap 6–7 ook op je telefoon
-      </div>
-    </div>
-  </div>
-  <div style="height:12px"></div>
-</div>
-
 <!-- Bottom nav (mobile) -->
 <nav class="bnav">
   <div class="bnav-inner">
-    <button class="bn active" id="bn-today" onclick="showPage('today',this,'bn-today')">
-      <span class="bni">📅</span>Vandaag
-    </button>
-    <button class="bn" id="bn-log" onclick="showPage('log',this,'bn-log')">
-      <span class="bni">📋</span>Apps
-    </button>
-    <button class="bn" id="bn-outreach" onclick="showPage('outreach',this,'bn-outreach')">
-      <span class="bni">✉️</span>Outreach
-    </button>
-    <button class="bn" id="bn-followups" onclick="showPage('followups',this,'bn-followups')">
-      <span class="bni">🔔</span>Follow-up
-    </button>
-    <button class="bn" id="bn-vacatures" onclick="showPage('vacatures',this,'bn-vacatures')">
-      <span class="bni">💼</span>Vacatures
-    </button>
-    <button class="bn" id="bn-stats" onclick="showPage('stats',this,'bn-stats')">
-      <span class="bni">📊</span>Stats
-    </button>
-    <button class="bn" id="bn-settings" onclick="showPage('settings',this,'bn-settings')">
-      <span class="bni">⚙️</span>Targets
-    </button>
+    <button class="bn active" id="bn-today" onclick="showPage('today',this,'bn-today')"><span class="bni">📅</span>Vandaag</button>
+    <button class="bn" id="bn-log" onclick="showPage('log',this,'bn-log')"><span class="bni">📋</span>Apps</button>
+    <button class="bn" id="bn-outreach" onclick="showPage('outreach',this,'bn-outreach')"><span class="bni">✉️</span>Outreach</button>
+    <button class="bn" id="bn-followups" onclick="showPage('followups',this,'bn-followups')"><span class="bni">🔔</span>Follow-up</button>
+    <button class="bn" id="bn-vacatures" onclick="showPage('vacatures',this,'bn-vacatures')"><span class="bni">💼</span>Vacatures</button>
+    <button class="bn" id="bn-stats" onclick="showPage('stats',this,'bn-stats')"><span class="bni">📊</span>Stats</button>
   </div>
 </nav>
 
-<!-- FAB -->
 <button class="fab" id="fabBtn" onclick="openAddModal()">+</button>
 
-<!-- ── APP MODAL ── -->
+<!-- APP MODAL -->
 <div class="ov" id="appOv" onclick="if(event.target===this)closeAppModal()">
   <div class="modal">
     <div class="mh"><span id="app-modal-title">Log Application</span><button class="mc" onclick="closeAppModal()">✕</button></div>
-
-    <!-- URL auto-fill -->
     <div style="background:#f8f7ff;border-radius:12px;padding:13px;margin-bottom:14px;">
       <div style="font-size:11px;font-weight:700;color:#5750D4;text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px;">⚡ Paste job URL — auto-fill title &amp; company</div>
       <div style="display:flex;gap:8px;">
@@ -453,40 +359,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       </div>
       <div id="f-detect-msg" style="font-size:12px;margin-top:6px;color:#888;min-height:14px;"></div>
     </div>
-
-    <div class="fg"><label class="fl">Job URL</label><input class="fi" id="f-url" type="url" placeholder="https://linkedin.com/jobs/view/..." style="font-size:13px;"></div>
+    <div class="fg"><label class="fl">Job URL</label><input class="fi" id="f-url" type="url" placeholder="https://..." style="font-size:13px;"></div>
     <div class="fg"><label class="fl">Job Title *</label><input class="fi" id="f-title" type="text" placeholder="e.g. Account Manager"></div>
     <div class="fg"><label class="fl">Company</label><input class="fi" id="f-company" type="text" placeholder="e.g. Aegon"></div>
     <div class="fg">
       <label class="fl">Platform / Source *</label>
-      <select class="fs" id="f-platform">
-        <option value="">Select...</option>
-        <optgroup label="🇦🇪 Dubai">
-          <option value="LinkedIn Dubai">LinkedIn Dubai</option>
-          <option value="Naukrigulf">Naukrigulf</option>
-          <option value="Bayt.com">Bayt.com</option>
-          <option value="Dubizzle Jobs">Dubizzle Jobs</option>
-          <option value="GulfTalent">GulfTalent</option>
-        </optgroup>
-        <optgroup label="🇳🇱 Netherlands">
-          <option value="LinkedIn Netherlands">LinkedIn Netherlands</option>
-          <option value="Indeed Netherlands">Indeed Netherlands</option>
-          <option value="WorkInHolland">WorkInHolland</option>
-          <option value="Glassdoor NL">Glassdoor NL</option>
-          <option value="Expatica NL">Expatica NL</option>
-        </optgroup>
-        <optgroup label="🌍 Remote">
-          <option value="Himalayas">Himalayas</option>
-          <option value="Remote.co">Remote.co</option>
-          <option value="LinkedIn Remote">LinkedIn Remote</option>
-          <option value="Other Remote">Other Remote</option>
-        </optgroup>
-        <optgroup label="➕ Other (not counted in daily target)">
-          <option value="Referral">Referral (friend/contact)</option>
-          <option value="Recruiter Reached Out">Recruiter Reached Out</option>
-          <option value="Company Direct">Company Website Direct</option>
-        </optgroup>
-      </select>
+      <select class="fs" id="f-platform"><option value="">Selecteer...</option></select>
     </div>
     <div class="fg">
       <label class="fl">Application Type</label>
@@ -508,28 +386,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
         <option value="Offer">Offer Received 🎉</option>
       </select>
     </div>
-    <div class="fg"><label class="fl">Notes (optional)</label><input class="fi" id="f-notes" type="text" placeholder="e.g. Friend referred me, mentioned remote in cover note"></div>
+    <div class="fg"><label class="fl">Notes (optional)</label><input class="fi" id="f-notes" type="text" placeholder="e.g. Friend referred me"></div>
     <button class="btn-p" id="app-submit-btn" onclick="saveApp()">✓ Log Application</button>
   </div>
 </div>
 
-<!-- ── OUTREACH MODAL ── -->
+<!-- OUTREACH MODAL -->
 <div class="ov" id="orOv" onclick="if(event.target===this)closeOrModal()">
   <div class="modal">
     <div class="mh"><span id="or-modal-title">Log Outreach</span><button class="mc" onclick="closeOrModal()">✕</button></div>
-
-    <!-- Linked job banner (shown when opened from a job card) -->
     <div id="or-linked-banner" style="display:none;background:#f0eeff;border-radius:10px;padding:11px 13px;margin-bottom:14px;">
       <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#5750D4;margin-bottom:3px;">Linked to job</div>
       <div id="or-linked-banner-text" style="font-size:13.5px;font-weight:600;color:#1C1C2E;"></div>
     </div>
-    <!-- Standalone: no linked job -->
     <div id="or-standalone-note" style="display:none;background:#f8f7f4;border-radius:10px;padding:11px 13px;margin-bottom:14px;font-size:13px;color:#888;">
-      Standalone outreach — not linked to a specific job. Handy for reaching out to recruiters in general.
+      Standalone outreach — not linked to a specific job.
     </div>
-
     <div class="fg"><label class="fl">Person's Name *</label><input class="fi" id="or-name" type="text" placeholder="e.g. Sarah van der Berg"></div>
-    <div class="fg"><label class="fl">Their Role at the Company</label><input class="fi" id="or-ptitle" type="text" placeholder="e.g. HR Manager, Recruiter, Hiring Manager, CEO"></div>
+    <div class="fg"><label class="fl">Their Role at the Company</label><input class="fi" id="or-ptitle" type="text" placeholder="e.g. HR Manager, Recruiter"></div>
     <div class="fg"><label class="fl">Email Address</label><input class="fi" id="or-email" type="email" placeholder="e.g. sarah@aegon.nl"></div>
     <div class="fg" id="or-company-row"><label class="fl">Company</label><input class="fi" id="or-company" type="text" placeholder="e.g. Aegon"></div>
     <div class="fg"><label class="fl">LinkedIn Profile URL</label><input class="fi" id="or-linkedin" type="url" placeholder="https://linkedin.com/in/..."></div>
@@ -543,13 +417,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
         <option value="Closed">Gesloten / niet geïnteresseerd</option>
       </select>
     </div>
-    <div class="fg"><label class="fl">Notes</label><input class="fi" id="or-notes" type="text" placeholder="e.g. Gevonden via LinkedIn, gepersonaliseerde mail gestuurd"></div>
+    <div class="fg"><label class="fl">Notes</label><input class="fi" id="or-notes" type="text" placeholder="e.g. Gevonden via LinkedIn"></div>
     <input type="hidden" id="or-linked-app-id">
     <button class="btn-p" id="or-submit-btn" onclick="saveOutreach()">✓ Log Outreach</button>
   </div>
 </div>
 
-<!-- ── STAGES MODAL ── -->
+<!-- STAGES MODAL -->
 <div class="ov" id="stageOv" onclick="if(event.target===this)closeStageModal()">
   <div class="modal">
     <div class="mh"><span id="stage-modal-title">Interview Pipeline</span><button class="mc" onclick="closeStageModal()">✕</button></div>
@@ -560,39 +434,83 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 </div>
 
 <script>
-// ── Constants ──────────────────────────────────────────────────────────────
 const KEY = 'jsq_v3';
-
-const REGION = {
-  'LinkedIn Dubai':'dubai','Naukrigulf':'dubai','Bayt.com':'dubai','Dubizzle Jobs':'dubai','GulfTalent':'dubai',
-  'LinkedIn Netherlands':'nl','Indeed Netherlands':'nl','WorkInHolland':'nl','Glassdoor NL':'nl','Expatica NL':'nl',
-  'Himalayas':'remote','Remote.co':'remote','LinkedIn Remote':'remote','Other Remote':'remote',
-  'Referral':'other','Recruiter Reached Out':'other','Company Direct':'other',
-};
-const EXCL = new Set(['Referral','Recruiter Reached Out','Company Direct']); // not in daily target
+const EXCL = new Set(['Referral','Recruiter Reached Out','Company Direct']);
 const COLOR = { dubai:'#FF6B35', nl:'#6C63FF', remote:'#2ECC71', other:'#888' };
-const DFLT_TARGETS = {
-  'LinkedIn Dubai':15,'Naukrigulf':5,'Bayt.com':5,'Dubizzle Jobs':5,'GulfTalent':5,
-  'LinkedIn Netherlands':10,'Indeed Netherlands':10,'WorkInHolland':0,'Glassdoor NL':0,'Expatica NL':0,
-  'Himalayas':5,'Remote.co':5,'LinkedIn Remote':5,'Other Remote':0,
-};
 const SL = { Applied:'Applied', Replied:'Replied ✓', Interview:'In Progress 🔄', FollowUp:'Following up', Rejected:'Rejected', Offer:'Offer 🎉' };
 const STAGE_TYPES = ['Phone Screen','Video Interview','In-Person Interview','Technical Test','Assessment / Task','Panel Interview','Final Interview','Reference Check','Offer Discussion'];
 const STAGE_STATUS = ['Scheduled','Passed ✓','Awaiting Feedback','Rejected','Offer'];
 
-// ── Data ───────────────────────────────────────────────────────────────────
-function load() {
-  try { return JSON.parse(localStorage.getItem(KEY)) || defData(); }
-  catch { return defData(); }
-}
-function defData() { return { apps:[], outreach:[], targets:{...DFLT_TARGETS} }; }
-function save(d) { d._ts = Date.now(); localStorage.setItem(KEY, JSON.stringify(d)); pushToCloud(d); }
+const DEFAULT_RP = {
+  dubai: ['LinkedIn Dubai','Naukrigulf','Bayt.com','Dubizzle Jobs','GulfTalent'],
+  nl:    ['LinkedIn Netherlands','Indeed Netherlands','WorkInHolland','Glassdoor NL','Expatica NL'],
+  remote:['Himalayas','Remote.co','LinkedIn Remote','Other Remote'],
+};
+const DEFAULT_TARGETS = {
+  'LinkedIn Dubai':4,'Naukrigulf':2,'Bayt.com':2,'Dubizzle Jobs':1,'GulfTalent':1,
+  'LinkedIn Netherlands':0,'Indeed Netherlands':0,'WorkInHolland':0,'Glassdoor NL':0,'Expatica NL':0,
+  'Himalayas':0,'Remote.co':0,'LinkedIn Remote':0,'Other Remote':0,
+};
 
-// ── Utils ──────────────────────────────────────────────────────────────────
+function defData() {
+  return { apps:[], outreach:[], targets:{...DEFAULT_TARGETS}, regionPlatforms: JSON.parse(JSON.stringify(DEFAULT_RP)) };
+}
+
+function load() {
+  try {
+    const d = JSON.parse(localStorage.getItem(KEY)) || defData();
+    // Migrate: if no regionPlatforms, build from old data
+    if (!d.regionPlatforms) {
+      d.regionPlatforms = JSON.parse(JSON.stringify(DEFAULT_RP));
+    }
+    if (!d.targets) d.targets = {...DEFAULT_TARGETS};
+    if (!d.outreach) d.outreach = [];
+    return d;
+  } catch { return defData(); }
+}
+
+function save(d) {
+  d._ts = Date.now();
+  localStorage.setItem(KEY, JSON.stringify(d));
+  pushToCloud(d);
+}
+
+function buildRegionMap(data) {
+  const map = {};
+  const rp = data.regionPlatforms || DEFAULT_RP;
+  Object.entries(rp).forEach(([region, platforms]) => {
+    platforms.forEach(p => { map[p] = region; });
+  });
+  EXCL.forEach(p => { map[p] = 'other'; });
+  return map;
+}
+
+function buildPlatformOptions(selectedValue='') {
+  const data = load();
+  const rp = data.regionPlatforms || DEFAULT_RP;
+  const flags = {dubai:'🇦🇪',nl:'🇳🇱',remote:'🌍'};
+  const labels = {dubai:'Dubai',nl:'Netherlands',remote:'Remote'};
+  let html = '<option value="">Selecteer...</option>';
+  ['dubai','nl','remote'].forEach(region => {
+    const platforms = rp[region] || [];
+    if (!platforms.length) return;
+    html += `<optgroup label="${flags[region]} ${labels[region]}">`;
+    platforms.forEach(p => {
+      html += `<option value="${p}"${p===selectedValue?' selected':''}>${p}</option>`;
+    });
+    html += '</optgroup>';
+  });
+  html += `<optgroup label="➕ Other">
+    <option value="Referral"${selectedValue==='Referral'?' selected':''}>Referral (friend/contact)</option>
+    <option value="Recruiter Reached Out"${selectedValue==='Recruiter Reached Out'?' selected':''}>Recruiter Reached Out</option>
+    <option value="Company Direct"${selectedValue==='Company Direct'?' selected':''}>Company Website Direct</option>
+  </optgroup>`;
+  return html;
+}
+
 function today() { return new Date().toISOString().slice(0,10); }
-function daysSince(ds) { return Math.floor((Date.now() - new Date(ds+'T12:00:00').getTime())/86400000); }
+function daysSince(ds) { return Math.floor((Date.now()-new Date(ds+'T12:00:00').getTime())/86400000); }
 function fmtDate(ds) { return new Date(ds+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'}); }
-function fmtDateShort(ds) { return new Date(ds+'T12:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'}); }
 function weekStart() {
   const d=new Date(); d.setHours(0,0,0,0);
   const wd=d.getDay(); d.setDate(d.getDate()+(wd===0?-6:1-wd)); return d;
@@ -610,61 +528,178 @@ function calcStreak(data) {
   return streak;
 }
 
-// ── Page nav ───────────────────────────────────────────────────────────────
-let currentPage = 'today';
-let currentFilter = 'all';
+// ── Page nav ──
+let currentPage='today', currentFilter='all';
 
-function showPage(name, el, bnId) {
-  currentPage = name;
+function showPage(name,el,bnId) {
+  currentPage=name;
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nb').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.bn').forEach(b=>b.classList.remove('active'));
   document.getElementById('page-'+name).classList.add('active');
   if(el) el.classList.add('active');
-  // sync bottom nav
-  const bnTarget = bnId || ('bn-'+name);
-  const bnEl = document.getElementById(bnTarget);
+  const bnTarget=bnId||('bn-'+name);
+  const bnEl=document.getElementById(bnTarget);
   if(bnEl) bnEl.classList.add('active');
-  // Switch FAB behaviour
-  document.getElementById('fabBtn').onclick = name==='outreach' ? openOrModal : openAddModal;
+  document.getElementById('fabBtn').onclick=name==='outreach'?openOrModal:openAddModal;
   renderAll();
-  // Load vacatures when opening that tab (auto-refresh each visit)
   if(name==='vacatures') loadTodaysJobs(false);
 }
 
-function setFilter(val, el) {
+function setFilter(val,el) {
   currentFilter=val;
   document.querySelectorAll('.fc').forEach(c=>c.classList.remove('active'));
   el.classList.add('active');
   renderLog(load());
 }
 
-// ── App Modal (add + edit) ─────────────────────────────────────────────────
-let editingAppId = null;
+// ── Edit mode (platforms) ──
+let _editMode=false;
+
+function toggleEditMode() {
+  _editMode=!_editMode;
+  const btn=document.getElementById('editPlatBtn');
+  const panel=document.getElementById('edit-platforms-panel');
+  const regions=document.getElementById('today-regions');
+  if(_editMode) {
+    btn.textContent='✕ Sluiten';
+    btn.style.background='#1C1C2E';
+    btn.style.color='#fff';
+    panel.style.display='block';
+    regions.style.display='none';
+    renderPlatformEditor();
+    // restore sync token if saved
+    const cfg=loadSyncCfg();
+    const tkEl=document.getElementById('sync-token');
+    if(tkEl&&cfg.token) tkEl.value=cfg.token;
+  } else {
+    cancelEditMode();
+  }
+}
+
+function cancelEditMode() {
+  _editMode=false;
+  const btn=document.getElementById('editPlatBtn');
+  btn.textContent='✏️ Platforms bewerken';
+  btn.style.background='#f0f0f0';
+  btn.style.color='#555';
+  document.getElementById('edit-platforms-panel').style.display='none';
+  document.getElementById('today-regions').style.display='block';
+}
+
+function renderPlatformEditor() {
+  const data=load();
+  const rp=data.regionPlatforms;
+  const rColor={dubai:'var(--dubai)',nl:'var(--nl)',remote:'var(--remote)'};
+  const rFlag={dubai:'🇦🇪',nl:'🇳🇱',remote:'🌍'};
+  const rLabel={dubai:'DUBAI',nl:'NETHERLANDS',remote:'REMOTE'};
+
+  let html='';
+  ['dubai','nl','remote'].forEach(region=>{
+    const platforms=rp[region]||[];
+    html+=`<div class="card" style="margin-bottom:10px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;color:${rColor[region]};margin-bottom:10px;">${rFlag[region]} ${rLabel[region]}</div>
+      ${platforms.map(p=>`
+        <div class="edit-plat-row">
+          <span style="font-size:13.5px;font-weight:500;flex:1;">${p}</span>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div style="display:flex;align-items:center;gap:4px;">
+              <span style="font-size:11px;color:#aaa;">Target:</span>
+              <input class="si" type="number" min="0" max="99" id="et-${p.replace(/[\s./]/g,'-')}" value="${data.targets[p]??0}">
+            </div>
+            <button onclick="removePlatform('${p.replace(/'/g,"\\'")}','${region}')" style="font-size:14px;color:#ddd;border:none;background:none;cursor:pointer;padding:2px 4px;line-height:1;" title="Verwijder">🗑</button>
+          </div>
+        </div>`).join('')}
+      <div style="margin-top:10px;padding-top:10px;border-top:1px dashed #eee;display:flex;gap:8px;">
+        <input type="text" id="new-plat-${region}" placeholder="Naam nieuw platform..."
+          style="flex:1;padding:8px 11px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;font-family:inherit;"
+          onkeydown="if(event.key==='Enter')addPlatform('${region}')">
+        <button onclick="addPlatform('${region}')"
+          style="padding:8px 14px;background:var(--dark);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;">+ Toevoegen</button>
+      </div>
+    </div>`;
+  });
+  document.getElementById('edit-platforms-content').innerHTML=html;
+}
+
+function addPlatform(region) {
+  const input=document.getElementById('new-plat-'+region);
+  const name=input.value.trim();
+  if(!name){input.focus();return;}
+  const data=load();
+  const rp=data.regionPlatforms;
+  const allPlatforms=[...Object.values(rp).flat()];
+  if(allPlatforms.includes(name)){alert('Dit platform staat er al in.');return;}
+  if(!rp[region]) rp[region]=[];
+  rp[region].push(name);
+  if(data.targets[name]===undefined) data.targets[name]=0;
+  save(data);
+  input.value='';
+  renderPlatformEditor();
+  renderAll();
+}
+
+function removePlatform(name,region) {
+  if(!confirm(`"${name}" verwijderen?\n\nJe applicaties van dit platform blijven bewaard.`)) return;
+  const data=load();
+  data.regionPlatforms[region]=(data.regionPlatforms[region]||[]).filter(p=>p!==name);
+  delete data.targets[name];
+  save(data);
+  renderPlatformEditor();
+  renderAll();
+}
+
+function savePlatformsEdit() {
+  const data=load();
+  ['dubai','nl','remote'].forEach(region=>{
+    (data.regionPlatforms[region]||[]).forEach(p=>{
+      const el=document.getElementById('et-'+p.replace(/[\s./]/g,'-'));
+      if(el) data.targets[p]=parseInt(el.value)||0;
+    });
+  });
+  save(data);
+  cancelEditMode();
+  renderAll();
+  // show quick confirmation on button
+  const btn=document.getElementById('editPlatBtn');
+  btn.textContent='✓ Opgeslagen!';
+  btn.style.background='#2ECC71';
+  btn.style.color='#fff';
+  setTimeout(()=>{
+    btn.textContent='✏️ Platforms bewerken';
+    btn.style.background='#f0f0f0';
+    btn.style.color='#555';
+  },2000);
+}
+
+// ── App Modal ──
+let editingAppId=null;
 
 function openAddModal() {
-  editingAppId = null;
+  editingAppId=null;
   clearAppForm();
-  document.getElementById('app-modal-title').textContent = 'Log Application';
-  document.getElementById('app-submit-btn').textContent = '✓ Log Application';
+  document.getElementById('f-platform').innerHTML=buildPlatformOptions();
+  document.getElementById('app-modal-title').textContent='Log Application';
+  document.getElementById('app-submit-btn').textContent='✓ Log Application';
   document.getElementById('appOv').classList.add('open');
   setTimeout(()=>document.getElementById('f-title').focus(),100);
 }
 
 function openEditModal(id) {
-  const data = load();
-  const app = data.apps.find(a=>a.id===id);
+  const data=load();
+  const app=data.apps.find(a=>a.id===id);
   if(!app) return;
-  editingAppId = id;
-  document.getElementById('f-url').value = app.url||'';
-  document.getElementById('f-title').value = app.title||'';
-  document.getElementById('f-company').value = app.company||'';
-  document.getElementById('f-platform').value = app.platform||'';
-  document.getElementById('f-type').value = app.type||'Easy Apply';
-  document.getElementById('f-status').value = app.status||'Applied';
-  document.getElementById('f-notes').value = app.notes||'';
-  document.getElementById('app-modal-title').textContent = 'Edit Application';
-  document.getElementById('app-submit-btn').textContent = '✓ Save Changes';
+  editingAppId=id;
+  document.getElementById('f-platform').innerHTML=buildPlatformOptions(app.platform||'');
+  document.getElementById('f-url').value=app.url||'';
+  document.getElementById('f-title').value=app.title||'';
+  document.getElementById('f-company').value=app.company||'';
+  document.getElementById('f-platform').value=app.platform||'';
+  document.getElementById('f-type').value=app.type||'Easy Apply';
+  document.getElementById('f-status').value=app.status||'Applied';
+  document.getElementById('f-notes').value=app.notes||'';
+  document.getElementById('app-modal-title').textContent='Edit Application';
+  document.getElementById('app-submit-btn').textContent='✓ Save Changes';
   document.getElementById('appOv').classList.add('open');
 }
 
@@ -673,26 +708,23 @@ function clearAppForm() {
     const el=document.getElementById('f-'+f); if(el) el.value='';
   });
   const msg=document.getElementById('f-detect-msg'); if(msg) msg.textContent='';
-  document.getElementById('f-platform').value='';
   document.getElementById('f-type').value='Easy Apply';
   document.getElementById('f-status').value='Applied';
 }
 
-function closeAppModal() {
-  document.getElementById('appOv').classList.remove('open');
-  editingAppId=null;
-}
+function closeAppModal() { document.getElementById('appOv').classList.remove('open'); editingAppId=null; }
 
 function saveApp() {
-  const platform = document.getElementById('f-platform').value;
-  const title = document.getElementById('f-title').value.trim();
-  if(!platform){alert('Please select a platform.');return;}
-  if(!title){alert('Please enter the job title.');return;}
+  const platform=document.getElementById('f-platform').value;
+  const title=document.getElementById('f-title').value.trim();
+  if(!platform){alert('Selecteer een platform.');return;}
+  if(!title){alert('Vul de functietitel in.');return;}
   const data=load();
+  const regionMap=buildRegionMap(data);
   if(editingAppId) {
     const app=data.apps.find(a=>a.id===editingAppId);
     if(app){
-      app.platform=platform; app.region=REGION[platform]||'other';
+      app.platform=platform; app.region=regionMap[platform]||'other';
       app.title=title; app.company=document.getElementById('f-company').value.trim();
       app.url=document.getElementById('f-url').value.trim();
       app.type=document.getElementById('f-type').value;
@@ -701,7 +733,7 @@ function saveApp() {
     }
   } else {
     data.apps.unshift({
-      id:Date.now(), date:today(), platform, region:REGION[platform]||'other',
+      id:Date.now(), date:today(), platform, region:regionMap[platform]||'other',
       title, company:document.getElementById('f-company').value.trim(),
       url:document.getElementById('f-url').value.trim(),
       type:document.getElementById('f-type').value,
@@ -713,125 +745,49 @@ function saveApp() {
   save(data); closeAppModal(); renderAll();
 }
 
-// ── Outreach Modal ─────────────────────────────────────────────────────────
-let editingOrId = null;
-
-// Auto-fill for the Add Application modal
 function autoFillAppFromUrl() {
-  const raw = document.getElementById('f-detect-url').value.trim();
-  const msg = document.getElementById('f-detect-msg');
-  if (!raw) { msg.textContent = 'Plak eerst een URL.'; msg.style.color = '#C06820'; return; }
-
+  const raw=document.getElementById('f-detect-url').value.trim();
+  const msg=document.getElementById('f-detect-msg');
+  if(!raw){msg.textContent='Plak eerst een URL.';msg.style.color='#C06820';return;}
   let parsed;
-  try { parsed = new URL(raw); } catch {
-    msg.textContent = 'Geen geldige URL — kopieer de volledige link.';
-    msg.style.color = '#C06820'; return;
-  }
-
-  const domain = parsed.hostname.replace('www.','');
-
-  // ── Clean the URL (strip tracking params for storage) ──
-  let cleanUrl = raw;
-  try {
-    // For LinkedIn, keep only the core job URL
-    const liViewMatch = raw.match(/(https?:\/\/(?:www\.)?linkedin\.com\/jobs\/view\/\d+)/);
-    const liJobId = parsed.searchParams.get('currentJobId') ||
-                    (raw.match(/\/jobs\/view\/(\d+)/) || [])[1] ||
-                    (raw.match(/currentJobId=(\d+)/) || [])[1];
-    if (liJobId) cleanUrl = `https://www.linkedin.com/jobs/view/${liJobId}/`;
-    else if (liViewMatch) cleanUrl = liViewMatch[1] + '/';
-  } catch {}
-
-  document.getElementById('f-url').value = cleanUrl;
-
-  // ── Platform detection ──
-  const platformMap = {
-    'linkedin.com':    null, // ask user (Dubai or NL?)
-    'indeed.com':      null,
-    'naukrigulf.com':  'Naukrigulf',
-    'bayt.com':        'Bayt.com',
-    'dubizzle.com':    'Dubizzle Jobs',
-    'gulfjobs.com':    'GulfTalent',
-    'workinholland.nl':'WorkInHolland',
-    'glassdoor.com':   'Glassdoor NL',
-    'expatica.com':    'Expatica NL',
-    'himalayas.app':   'Himalayas',
-    'remote.co':       'Remote.co',
-  };
-
-  // ── Company detection (direct company sites) ──
-  const companyMap = {
-    'aegon.nl':'Aegon','nn-group.com':'NN Group','achmea.nl':'Achmea',
-    'menzis.nl':'Menzis','vgz.nl':'VGZ','zilveren-kruis.nl':'Zilveren Kruis',
-    'booking.com':'Booking.com','philips.com':'Philips','ing.nl':'ING',
-    'rabobank.nl':'Rabobank','shell.com':'Shell','unilever.com':'Unilever',
-    'tomtom.com':'TomTom','adyen.com':'Adyen','cigna.com':'Cigna',
-    'hbo.com':'HBO','dlapiper.com':'DLA Piper','bakermckenzie.com':'Baker McKenzie',
-    'nautadutilh.com':'NautaDutilh',
-  };
-
-  const knownPlatform = Object.entries(platformMap).find(([d])=>domain.includes(d));
-  const knownCompany  = Object.entries(companyMap).find(([d])=>domain.includes(d));
-
-  // Auto-set platform dropdown if unambiguous
-  if (knownPlatform && knownPlatform[1]) {
-    document.getElementById('f-platform').value = knownPlatform[1];
-  }
-  // Auto-set company if it's a direct company site
-  if (knownCompany && !document.getElementById('f-company').value) {
-    document.getElementById('f-company').value = knownCompany[1];
-  }
-
-  // ── Feedback message ──
-  if (domain.includes('linkedin.com')) {
-    const jobId = (cleanUrl.match(/\/jobs\/view\/(\d+)/) || [])[1];
-    msg.innerHTML = jobId
-      ? `✓ LinkedIn job-ID <strong>${jobId}</strong> herkend — URL opgeslagen en opgeschoond.<br><span style="color:#555">LinkedIn deelt de functietitel en het bedrijf niet via de URL. Ga naar de LinkedIn pagina, kopieer de titel en het bedrijf, en vul ze hieronder in.</span>`
-      : `✓ LinkedIn URL opgeslagen. Vul functietitel en bedrijf handmatig in.`;
-    msg.style.color = '#5750D4';
-  } else if (domain.includes('indeed.com')) {
-    msg.innerHTML = `✓ Indeed URL opgeslagen. Vul functietitel en bedrijf in vanuit de Indeed pagina.`;
-    msg.style.color = '#5750D4';
-  } else if (knownCompany) {
-    msg.innerHTML = `✓ Bedrijfssite herkend: <strong>${knownCompany[1]}</strong>. Vul de functietitel in.`;
-    msg.style.color = '#1A7A42';
-  } else if (knownPlatform && knownPlatform[1]) {
-    msg.innerHTML = `✓ Platform herkend: <strong>${knownPlatform[1]}</strong>. Vul functietitel en bedrijf in.`;
-    msg.style.color = '#1A7A42';
+  try{parsed=new URL(raw);}catch{msg.textContent='Geen geldige URL.';msg.style.color='#C06820';return;}
+  const domain=parsed.hostname.replace('www.','');
+  let cleanUrl=raw;
+  try{
+    const liJobId=parsed.searchParams.get('currentJobId')||(raw.match(/\/jobs\/view\/(\d+)/)||[])[1];
+    if(liJobId) cleanUrl=`https://www.linkedin.com/jobs/view/${liJobId}/`;
+  }catch{}
+  document.getElementById('f-url').value=cleanUrl;
+  const platformMap={'naukrigulf.com':'Naukrigulf','bayt.com':'Bayt.com','dubizzle.com':'Dubizzle Jobs','gulfjobs.com':'GulfTalent','workinholland.nl':'WorkInHolland','glassdoor.com':'Glassdoor NL','expatica.com':'Expatica NL','himalayas.app':'Himalayas','remote.co':'Remote.co'};
+  const companyMap={'aegon.nl':'Aegon','booking.com':'Booking.com','philips.com':'Philips','ing.nl':'ING','adyen.com':'Adyen','dlapiper.com':'DLA Piper','bakermckenzie.com':'Baker McKenzie'};
+  const knownPlatform=Object.entries(platformMap).find(([d])=>domain.includes(d));
+  const knownCompany=Object.entries(companyMap).find(([d])=>domain.includes(d));
+  if(knownPlatform&&knownPlatform[1]) document.getElementById('f-platform').value=knownPlatform[1];
+  if(knownCompany&&!document.getElementById('f-company').value) document.getElementById('f-company').value=knownCompany[1];
+  if(domain.includes('linkedin.com')){
+    const jobId=(cleanUrl.match(/\/jobs\/view\/(\d+)/)||[])[1];
+    msg.innerHTML=jobId?`✓ LinkedIn job-ID <strong>${jobId}</strong> herkend. Vul titel en bedrijf handmatig in.`:'✓ LinkedIn URL opgeslagen. Vul titel en bedrijf in.';
+    msg.style.color='#5750D4';
+  } else if(knownCompany){
+    msg.innerHTML=`✓ Bedrijfssite herkend: <strong>${knownCompany[1]}</strong>. Vul de functietitel in.`;
+    msg.style.color='#1A7A42';
+  } else if(knownPlatform&&knownPlatform[1]){
+    msg.innerHTML=`✓ Platform herkend: <strong>${knownPlatform[1]}</strong>. Vul titel en bedrijf in.`;
+    msg.style.color='#1A7A42';
   } else {
-    msg.textContent = '✓ URL opgeslagen. Vul functietitel en bedrijf in.';
-    msg.style.color = '#888';
+    msg.textContent='✓ URL opgeslagen. Vul titel en bedrijf in.';
+    msg.style.color='#888';
   }
-
-  // Focus title field for quick entry
-  setTimeout(() => document.getElementById('f-title').focus(), 80);
+  setTimeout(()=>document.getElementById('f-title').focus(),80);
 }
 
-function orAppSelected() {
-  const sel = document.getElementById('or-linked-app');
-  const appId = parseInt(sel.value);
-  if(!appId) return;
-  const data = load();
-  const app = data.apps.find(a => a.id === appId);
-  if(app) {
-    if(!document.getElementById('or-role').value) document.getElementById('or-role').value = app.title;
-    if(!document.getElementById('or-company').value) document.getElementById('or-company').value = app.company||'';
-  }
-}
+// ── Outreach Modal ──
+let editingOrId=null;
 
-function clearOrForm() {
-  ['name','ptitle','email','company','linkedin','notes'].forEach(f=>{
-    const el = document.getElementById('or-'+f); if(el) el.value='';
-  });
-  document.getElementById('or-status').value='Sent';
-  document.getElementById('or-linked-app-id').value='';
-}
-
-// Open for editing an existing outreach entry
 function openOrModal(id=null) {
-  editingOrId = id;
+  editingOrId=id;
   clearOrForm();
-  if(id) {
+  if(id){
     const data=load();
     const or=data.outreach.find(o=>o.id===id);
     if(or){
@@ -843,19 +799,13 @@ function openOrModal(id=null) {
       document.getElementById('or-status').value=or.status||'Sent';
       document.getElementById('or-notes').value=or.notes||'';
       document.getElementById('or-linked-app-id').value=or.linkedAppId||'';
-      // Show linked job banner if applicable
-      if(or.linkedAppId) {
-        const app=data.apps.find(a=>a.id===or.linkedAppId);
-        if(app) showLinkedBanner(app);
-        else hideLinkedBanner(false);
-      } else {
-        hideLinkedBanner(true);
-      }
+      if(or.linkedAppId){const app=data.apps.find(a=>a.id===or.linkedAppId);if(app)showLinkedBanner(app);else hideLinkedBanner(false);}
+      else hideLinkedBanner(true);
     }
     document.getElementById('or-modal-title').textContent='Edit Outreach';
     document.getElementById('or-submit-btn').textContent='✓ Save Changes';
   } else {
-    hideLinkedBanner(true); // standalone
+    hideLinkedBanner(true);
     document.getElementById('or-modal-title').textContent='Standalone Outreach';
     document.getElementById('or-submit-btn').textContent='✓ Log Outreach';
   }
@@ -863,10 +813,8 @@ function openOrModal(id=null) {
   setTimeout(()=>document.getElementById('or-name').focus(),100);
 }
 
-// Open linked to a specific job (from job card)
 function openOrModalForApp(appId) {
-  editingOrId = null;
-  clearOrForm();
+  editingOrId=null; clearOrForm();
   const data=load();
   const app=data.apps.find(a=>a.id===appId);
   if(!app) return;
@@ -881,10 +829,8 @@ function openOrModalForApp(appId) {
 
 function showLinkedBanner(app) {
   document.getElementById('or-linked-banner').style.display='block';
-  document.getElementById('or-linked-banner-text').textContent=
-    app.title+(app.company?' · '+app.company:'')+(app.platform?' ('+app.platform+')':'');
+  document.getElementById('or-linked-banner-text').textContent=app.title+(app.company?' · '+app.company:'')+(app.platform?' ('+app.platform+')':'');
   document.getElementById('or-standalone-note').style.display='none';
-  // Lock company field since it comes from the job
   const cEl=document.getElementById('or-company');
   if(cEl){cEl.readOnly=true;cEl.style.color='#888';}
 }
@@ -896,34 +842,37 @@ function hideLinkedBanner(standalone) {
   if(cEl){cEl.readOnly=false;cEl.style.color='';}
 }
 
+function clearOrForm() {
+  ['name','ptitle','email','company','linkedin','notes'].forEach(f=>{
+    const el=document.getElementById('or-'+f); if(el) el.value='';
+  });
+  document.getElementById('or-status').value='Sent';
+  document.getElementById('or-linked-app-id').value='';
+}
+
 function closeOrModal() { document.getElementById('orOv').classList.remove('open'); editingOrId=null; }
 
 function saveOutreach() {
   const name=document.getElementById('or-name').value.trim();
-  const company=document.getElementById('or-company').value.trim();
-  if(!name){alert('Please enter a name.');return;}
+  if(!name){alert('Vul een naam in.');return;}
   const data=load();
   if(!data.outreach) data.outreach=[];
-  const linkedVal = document.getElementById('or-linked-app-id').value;
-  // If linked to a job, get company from that job
-  const linkedAppId = linkedVal ? parseInt(linkedVal) : null;
-  const linkedApp = linkedAppId ? data.apps.find(a=>a.id===linkedAppId) : null;
+  const linkedVal=document.getElementById('or-linked-app-id').value;
+  const linkedAppId=linkedVal?parseInt(linkedVal):null;
+  const linkedApp=linkedAppId?data.apps.find(a=>a.id===linkedAppId):null;
   const obj={
-    id:editingOrId||Date.now(), date:editingOrId?(data.outreach.find(o=>o.id===editingOrId)?.date||today()):today(),
+    id:editingOrId||Date.now(),
+    date:editingOrId?(data.outreach.find(o=>o.id===editingOrId)?.date||today()):today(),
     personName:name, personTitle:document.getElementById('or-ptitle').value.trim(),
     email:document.getElementById('or-email').value.trim(),
-    company: linkedApp ? (linkedApp.company||company) : company,
+    company:linkedApp?(linkedApp.company||document.getElementById('or-company').value.trim()):document.getElementById('or-company').value.trim(),
     linkedin:document.getElementById('or-linkedin').value.trim(),
     status:document.getElementById('or-status').value,
     notes:document.getElementById('or-notes').value.trim(),
     linkedAppId,
   };
-  if(editingOrId) {
-    const idx=data.outreach.findIndex(o=>o.id===editingOrId);
-    if(idx>-1) data.outreach[idx]=obj;
-  } else {
-    data.outreach.unshift(obj);
-  }
+  if(editingOrId){const idx=data.outreach.findIndex(o=>o.id===editingOrId);if(idx>-1)data.outreach[idx]=obj;}
+  else data.outreach.unshift(obj);
   save(data); closeOrModal(); renderAll();
 }
 
@@ -932,21 +881,21 @@ function deleteOutreach(id) {
   const data=load(); data.outreach=data.outreach.filter(o=>o.id!==id); save(data); renderAll();
 }
 
-function updateOrStatus(id, status) {
+function updateOrStatus(id,status) {
   const data=load(); const o=data.outreach.find(x=>x.id===id);
   if(o){o.status=status;save(data);renderAll();}
 }
 
-// ── Stages Modal ───────────────────────────────────────────────────────────
-let stageAppId = null;
+// ── Stages Modal ──
+let stageAppId=null;
 
 function openStageModal(id) {
   stageAppId=id;
   const data=load();
   const app=data.apps.find(a=>a.id===id);
   if(!app) return;
-  document.getElementById('stage-modal-title').textContent = `${app.title}`;
-  document.getElementById('stage-app-info').innerHTML = `<strong>${app.company||'—'}</strong> · ${app.platform} · Applied ${fmtDate(app.date)}`;
+  document.getElementById('stage-modal-title').textContent=app.title;
+  document.getElementById('stage-app-info').innerHTML=`<strong>${app.company||'—'}</strong> · ${app.platform} · Applied ${fmtDate(app.date)}`;
   renderStageList(app);
   document.getElementById('stageOv').classList.add('open');
 }
@@ -954,47 +903,32 @@ function openStageModal(id) {
 function closeStageModal() { document.getElementById('stageOv').classList.remove('open'); stageAppId=null; }
 
 function renderStageList(app) {
-  const stages = app.stages||[];
-  const el = document.getElementById('stage-list');
-  if(!stages.length) {
-    el.innerHTML = `<div class="empty" style="padding:16px 0"><div class="ei">📋</div><div class="et">No stages logged yet.<br>Tap "Add Next Stage" below to start.</div></div>`;
+  const stages=app.stages||[];
+  const el=document.getElementById('stage-list');
+  if(!stages.length){
+    el.innerHTML=`<div class="empty" style="padding:16px 0"><div class="ei">📋</div><div class="et">No stages logged yet.<br>Tap "Add Next Stage" below.</div></div>`;
     return;
   }
-  el.innerHTML = stages.map((s,i)=>`
+  el.innerHTML=stages.map((s,i)=>`
     <div style="border:1.5px solid #f0f0f0;border-radius:12px;padding:13px;margin-bottom:10px;">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
-        <div>
-          <span style="background:var(--dark);color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;">Stage ${s.stageNum}</span>
-          <span style="font-size:13px;font-weight:600;margin-left:8px">${s.type||''}</span>
-        </div>
+        <div><span style="background:var(--dark);color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;">Stage ${s.stageNum}</span>
+        <span style="font-size:13px;font-weight:600;margin-left:8px">${s.type||''}</span></div>
         <button onclick="deleteStage(${stageAppId},${s.id})" style="font-size:11px;color:#ccc;border:none;background:none;cursor:pointer">remove</button>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
-        <div>
-          <label style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aaa;display:block;margin-bottom:3px">Date</label>
-          <input type="date" value="${s.date||''}" onchange="updateStageField(${stageAppId},${s.id},'date',this.value)"
-            style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;">
-        </div>
-        <div>
-          <label style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aaa;display:block;margin-bottom:3px">Status</label>
-          <select onchange="updateStageField(${stageAppId},${s.id},'status',this.value)"
-            style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;background:#fff;outline:none;">
-            ${STAGE_STATUS.map(st=>`<option value="${st}" ${s.status===st?'selected':''}>${st}</option>`).join('')}
-          </select>
-        </div>
+        <div><label style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aaa;display:block;margin-bottom:3px">Date</label>
+        <input type="date" value="${s.date||''}" onchange="updateStageField(${stageAppId},${s.id},'date',this.value)" style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;"></div>
+        <div><label style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aaa;display:block;margin-bottom:3px">Status</label>
+        <select onchange="updateStageField(${stageAppId},${s.id},'status',this.value)" style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;background:#fff;outline:none;">
+          ${STAGE_STATUS.map(st=>`<option value="${st}" ${s.status===st?'selected':''}>${st}</option>`).join('')}
+        </select></div>
       </div>
-      <div>
-        <label style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#aaa;display:block;margin-bottom:3px">Type</label>
-        <select onchange="updateStageField(${stageAppId},${s.id},'type',this.value)"
-          style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;background:#fff;outline:none;margin-bottom:7px">
-          ${STAGE_TYPES.map(t=>`<option value="${t}" ${s.type===t?'selected':''}>${t}</option>`).join('')}
-        </select>
-        <input type="text" placeholder="Notes about this stage..." value="${s.notes||''}"
-          onchange="updateStageField(${stageAppId},${s.id},'notes',this.value)"
-          style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;">
-      </div>
-    </div>
-  `).join('');
+      <select onchange="updateStageField(${stageAppId},${s.id},'type',this.value)" style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;background:#fff;outline:none;margin-bottom:7px">
+        ${STAGE_TYPES.map(t=>`<option value="${t}" ${s.type===t?'selected':''}>${t}</option>`).join('')}
+      </select>
+      <input type="text" placeholder="Notes..." value="${s.notes||''}" onchange="updateStageField(${stageAppId},${s.id},'notes',this.value)" style="width:100%;padding:7px 9px;border:1.5px solid #e5e5e5;border-radius:8px;font-size:13px;outline:none;">
+    </div>`).join('');
 }
 
 function addStage() {
@@ -1002,40 +936,37 @@ function addStage() {
   const app=data.apps.find(a=>a.id===stageAppId);
   if(!app) return;
   if(!app.stages) app.stages=[];
-  const nextNum = (app.stages.length>0?Math.max(...app.stages.map(s=>s.stageNum)):0)+1;
-  app.stages.push({ id:Date.now(), stageNum:nextNum, type:'Video Interview', date:today(), status:'Scheduled', notes:'' });
-  save(data);
-  renderStageList(app);
+  const nextNum=(app.stages.length>0?Math.max(...app.stages.map(s=>s.stageNum)):0)+1;
+  app.stages.push({id:Date.now(),stageNum:nextNum,type:'Video Interview',date:today(),status:'Scheduled',notes:''});
+  save(data); renderStageList(app);
 }
 
-function updateStageField(appId, stageId, field, val) {
+function updateStageField(appId,stageId,field,val) {
   const data=load();
   const app=data.apps.find(a=>a.id===appId);
   if(!app) return;
   const stage=app.stages.find(s=>s.id===stageId);
-  if(stage){ stage[field]=val; save(data); }
+  if(stage){stage[field]=val;save(data);}
 }
 
-function deleteStage(appId, stageId) {
+function deleteStage(appId,stageId) {
   if(!confirm('Remove this stage?')) return;
   const data=load();
   const app=data.apps.find(a=>a.id===appId);
-  if(app){ app.stages=app.stages.filter(s=>s.id!==stageId); save(data); renderStageList(app); renderAll(); }
+  if(app){app.stages=app.stages.filter(s=>s.id!==stageId);save(data);renderStageList(app);renderAll();}
 }
 
-// ── Render ─────────────────────────────────────────────────────────────────
+// ── Render ──
 function renderAll() {
   const data=load();
   const td=today();
-  const todayApps=data.apps.filter(a=>a.date===td && !EXCL.has(a.platform));
+  const todayApps=data.apps.filter(a=>a.date===td&&!EXCL.has(a.platform));
   const weekApps=data.apps.filter(a=>!EXCL.has(a.platform)&&new Date(a.date+'T12:00:00')>=weekStart());
 
-  // Header
   document.getElementById('hdrDate').textContent=new Date().toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'});
   const streak=calcStreak(data);
   document.getElementById('streakEl').textContent=streak>1?`🔥 ${streak} day streak`:'';
 
-  // Summary
   const totalTarget=Object.entries(data.targets).reduce((s,[p,v])=>s+(EXCL.has(p)?0:v),0);
   document.getElementById('s-today').textContent=todayApps.length;
   document.getElementById('s-today').style.color=todayApps.length>=totalTarget&&totalTarget>0?'#2ECC71':'var(--text)';
@@ -1049,14 +980,13 @@ function renderAll() {
   renderOutreach(data);
   renderFollowups(data);
   renderStats(data);
-  renderSettings(data);
 
   const fuCount=data.apps.filter(a=>a.status==='Applied'&&daysSince(a.date)>=7).length;
   document.getElementById('fu-badge').textContent=fuCount>0?` (${fuCount})`:'';
 }
 
-function renderRegion(region, prefix, data, todayApps) {
-  const platforms=Object.keys(REGION).filter(p=>REGION[p]===region&&!EXCL.has(p));
+function renderRegion(region,prefix,data,todayApps) {
+  const platforms=(data.regionPlatforms?.[region]||[]);
   const color=COLOR[region];
   let done=0,target=0,html='';
   platforms.forEach(p=>{
@@ -1070,17 +1000,19 @@ function renderRegion(region, prefix, data, todayApps) {
       <div class="pt"><div class="pf" style="width:${pct}%;background:${ok?'#2ECC71':color}"></div></div>
     </div>`;
   });
-  document.getElementById(prefix+'-bars').innerHTML=html||'<div style="font-size:12px;color:#bbb;padding:2px 0">No targets set. Go to Targets tab.</div>';
+  if(!html) html=`<div style="font-size:12px;color:#bbb;padding:4px 0">Geen actieve targets — klik ✏️ om platforms in te stellen.</div>`;
+  document.getElementById(prefix+'-bars').innerHTML=html;
   document.getElementById(prefix+'-c').textContent=`${done}/${target}`;
 }
 
 function renderLog(data) {
   const list=document.getElementById('log-list');
+  const regionMap=buildRegionMap(data);
   let apps=data.apps;
-  if(currentFilter==='dubai') apps=apps.filter(a=>a.region==='dubai');
-  else if(currentFilter==='nl') apps=apps.filter(a=>a.region==='nl');
-  else if(currentFilter==='remote') apps=apps.filter(a=>a.region==='remote');
-  else if(currentFilter==='other') apps=apps.filter(a=>a.region==='other');
+  if(currentFilter==='dubai') apps=apps.filter(a=>(a.region||regionMap[a.platform]||'other')==='dubai');
+  else if(currentFilter==='nl') apps=apps.filter(a=>(a.region||regionMap[a.platform]||'other')==='nl');
+  else if(currentFilter==='remote') apps=apps.filter(a=>(a.region||regionMap[a.platform]||'other')==='remote');
+  else if(currentFilter==='other') apps=apps.filter(a=>(a.region||regionMap[a.platform]||'other')==='other');
   else if(['Applied','Replied','Interview','FollowUp','Rejected','Offer'].includes(currentFilter)) apps=apps.filter(a=>a.status===currentFilter);
   document.getElementById('log-count').textContent=`${apps.length} shown`;
   if(!apps.length){
@@ -1088,38 +1020,34 @@ function renderLog(data) {
     return;
   }
   list.innerHTML=apps.map(a=>{
+    const appRegion=a.region||regionMap[a.platform]||'other';
     const stages=a.stages||[];
     const stageSummary=stages.length>0?`
       <div class="stage-track">
-        ${stages.map(s=>{
-          const cls=s.status.startsWith('Pass')?'passed':s.status==='Scheduled'?'scheduled':s.status==='Awaiting Feedback'?'awaiting':s.status==='Rejected'?'rejected':'';
-          return `<span class="stage-pill ${cls}">Stage ${s.stageNum}: ${s.type.replace(' Interview','').replace('Assessment / ','')}</span>`;
-        }).join('')}
+        ${stages.map(s=>{const cls=s.status.startsWith('Pass')?'passed':s.status==='Scheduled'?'scheduled':s.status==='Awaiting Feedback'?'awaiting':s.status==='Rejected'?'rejected':'';
+        return `<span class="stage-pill ${cls}">Stage ${s.stageNum}: ${s.type.replace(' Interview','').replace('Assessment / ','')}</span>`;}).join('')}
         <button class="stage-add" onclick="openStageModal(${a.id})">+ update</button>
-      </div>` : (a.status==='Interview'?`<div class="stage-track"><button class="stage-add" onclick="openStageModal(${a.id})">+ track stages</button></div>`:'');
-    // Outreach entries linked to this app
-    const linkedOutreach = (data.outreach||[]).filter(o=>o.linkedAppId===a.id);
-    const outreachChips = linkedOutreach.length ? `
+      </div>`:(a.status==='Interview'?`<div class="stage-track"><button class="stage-add" onclick="openStageModal(${a.id})">+ track stages</button></div>`:'');
+    const linkedOutreach=(data.outreach||[]).filter(o=>o.linkedAppId===a.id);
+    const outreachChips=linkedOutreach.length?`
       <div style="margin-top:7px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;">
         <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#bbb;">Outreach:</span>
-        ${linkedOutreach.map(o=>`<span style="font-size:11px;background:#f0eeff;color:#5750D4;border-radius:6px;padding:2px 8px;font-weight:600;">${o.personName}${o.personTitle?' ('+o.personTitle+')':''}</span>`).join('')}
-        <button onclick="openOrModalForApp(${a.id})" style="font-size:11px;color:#6C63FF;background:none;border:1.5px dashed #C8C2FF;border-radius:6px;padding:2px 8px;cursor:pointer;">+ add person</button>
-      </div>` : `
+        ${linkedOutreach.map(o=>`<span style="font-size:11px;background:#f0eeff;color:#5750D4;border-radius:6px;padding:2px 8px;font-weight:600;">${o.personName}</span>`).join('')}
+        <button onclick="openOrModalForApp(${a.id})" style="font-size:11px;color:#6C63FF;background:none;border:1.5px dashed #C8C2FF;border-radius:6px;padding:2px 8px;cursor:pointer;">+ add</button>
+      </div>`:`
       <div style="margin-top:7px;">
-        <button onclick="openOrModalForApp(${a.id})" style="font-size:11px;color:#999;background:none;border:1.5px dashed #ddd;border-radius:6px;padding:3px 9px;cursor:pointer;">✉️ Persoonlijk uitreiken?</button>
+        <button onclick="openOrModalForApp(${a.id})" style="font-size:11px;color:#999;background:none;border:1.5px dashed #ddd;border-radius:6px;padding:3px 9px;cursor:pointer;">✉️ Uitreiken?</button>
       </div>`;
-
     return `<div class="ai">
-      <div class="rdot" style="background:${COLOR[a.region]||'#888'}"></div>
+      <div class="rdot" style="background:${COLOR[appRegion]||'#888'}"></div>
       <div style="flex:1;min-width:0">
         <div class="at">${a.title}</div>
         <div class="am">${[a.company,a.platform,fmtDate(a.date)].filter(Boolean).join(' · ')}</div>
         <span class="sp s-${a.status}">${SL[a.status]||a.status}</span>
-        ${a.region==='other'?'<span class="sp" style="background:#f0f0f0;color:#888;margin-left:4px">'+a.platform+'</span>':''}
+        ${appRegion==='other'?'<span class="sp" style="background:#f0f0f0;color:#888;margin-left:4px">'+a.platform+'</span>':''}
         ${a.type==='Full Application'?'<span class="sp" style="background:#f0eeff;color:#6c63ff;margin-left:4px">Tailored</span>':''}
         ${a.notes?`<div style="font-size:11.5px;color:#999;margin-top:4px">${a.notes}</div>`:''}
-        ${stageSummary}
-        ${outreachChips}
+        ${stageSummary}${outreachChips}
       </div>
       <div class="ia">
         <select class="ms" onchange="updateAppStatus(${a.id},this.value)">
@@ -1147,15 +1075,14 @@ function renderOutreach(data) {
     list.innerHTML='<div class="empty"><div class="ei">✉️</div><div class="et">No outreach logged yet.<br>Tap <strong>+</strong> to log a direct email.</div></div>';
     return;
   }
-  const SOR = { Sent:'Verstuurd', Replied:'Gereageerd ✓', Meeting:'Meeting gepland 📅', NoResponse:'Geen reactie', Closed:'Gesloten' };
-
-  const orCard = (o, linkedApp) => `
+  const SOR={Sent:'Verstuurd',Replied:'Gereageerd ✓',Meeting:'Meeting gepland 📅',NoResponse:'Geen reactie',Closed:'Gesloten'};
+  const orCard=(o)=>`
     <div class="or-item">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
         <div style="flex:1;min-width:0">
           <div class="or-name">${o.personName}${o.personTitle?` <span style="font-weight:400;color:#888;font-size:12px">· ${o.personTitle}</span>`:''}</div>
           ${o.email?`<div style="font-size:12px;color:#6C63FF;margin-top:1px">${o.email}</div>`:''}
-          <div class="or-meta" style="margin-top:3px">${[o.company,fmtDate(o.date)].filter(Boolean).join(' · ')}</div>
+          <div class="or-meta">${[o.company,fmtDate(o.date)].filter(Boolean).join(' · ')}</div>
           <span class="or-pill os-${o.status}">${SOR[o.status]||o.status}</span>
           ${o.notes?`<div style="font-size:11.5px;color:#999;margin-top:4px">${o.notes}</div>`:''}
         </div>
@@ -1173,49 +1100,35 @@ function renderOutreach(data) {
         </div>
       </div>
     </div>`;
-
-  // Group linked outreach by job, then show standalones
-  const linked = items.filter(o=>o.linkedAppId);
-  const standalone = items.filter(o=>!o.linkedAppId);
-
-  // Group by job
-  const byJob = {};
-  linked.forEach(o=>{
-    const key = o.linkedAppId;
-    if(!byJob[key]) byJob[key]=[];
-    byJob[key].push(o);
-  });
-
-  let html = '';
-
-  if(Object.keys(byJob).length) {
-    Object.entries(byJob).forEach(([appId, entries])=>{
-      const app = data.apps.find(a=>a.id===parseInt(appId));
-      html += `<div style="margin-bottom:14px;">
+  const linked=items.filter(o=>o.linkedAppId);
+  const standalone=items.filter(o=>!o.linkedAppId);
+  const byJob={};
+  linked.forEach(o=>{if(!byJob[o.linkedAppId])byJob[o.linkedAppId]=[];byJob[o.linkedAppId].push(o);});
+  let html='';
+  if(Object.keys(byJob).length){
+    Object.entries(byJob).forEach(([appId,entries])=>{
+      const app=data.apps.find(a=>a.id===parseInt(appId));
+      html+=`<div style="margin-bottom:14px;">
         <div style="background:#f0eeff;border-radius:10px 10px 0 0;padding:9px 13px;border-bottom:1px solid #e0d8ff;">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#5750D4;margin-bottom:2px">Linked to job</div>
           <div style="font-size:13.5px;font-weight:700;color:#1C1C2E">${app?app.title:'Verwijderde job'}${app&&app.company?' · '+app.company:''}</div>
         </div>
         <div style="border:1.5px solid #e0d8ff;border-top:none;border-radius:0 0 10px 10px;padding:0 13px;">
-          ${entries.map(o=>orCard(o,app)).join('')}
+          ${entries.map(o=>orCard(o)).join('')}
           <div style="padding:10px 0 4px">
-            <button onclick="openOrModalForApp(${appId})" style="font-size:12px;color:#6C63FF;background:#f8f7ff;border:1.5px dashed #C8C2FF;border-radius:8px;padding:6px 13px;cursor:pointer;font-weight:600;width:100%;">+ Nog iemand toevoegen bij deze job</button>
+            <button onclick="openOrModalForApp(${appId})" style="font-size:12px;color:#6C63FF;background:#f8f7ff;border:1.5px dashed #C8C2FF;border-radius:8px;padding:6px 13px;cursor:pointer;font-weight:600;width:100%;">+ Nog iemand toevoegen</button>
           </div>
         </div>
       </div>`;
     });
   }
-
-  if(standalone.length) {
-    html += `<div style="margin-top:${Object.keys(byJob).length?'14px':'0'}">
-      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#bbb;margin-bottom:8px;">Standalone outreach (niet gelinkt aan een job)</div>
-      <div style="border:1.5px solid #f0f0f0;border-radius:10px;padding:0 13px;">
-        ${standalone.map(o=>orCard(o,null)).join('')}
-      </div>
+  if(standalone.length){
+    html+=`<div style="margin-top:${Object.keys(byJob).length?'14px':'0'}">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#bbb;margin-bottom:8px;">Standalone outreach</div>
+      <div style="border:1.5px solid #f0f0f0;border-radius:10px;padding:0 13px;">${standalone.map(o=>orCard(o)).join('')}</div>
     </div>`;
   }
-
-  list.innerHTML = html;
+  list.innerHTML=html;
 }
 
 function renderFollowups(data) {
@@ -1233,30 +1146,25 @@ function renderFollowups(data) {
       </div>
       <div class="fu-acts">
         <button class="fu-btn fu-do" onclick="updateAppStatus(${a.id},'FollowUp')">✓ Followed up</button>
-        ${a.url?`<a class="fu-btn" style="background:#fff;color:#333;border:1px solid #ddd;text-decoration:none" href="${a.url}" target="_blank">Open job ↗</a>`:''}
+        ${a.url?`<a class="fu-btn" style="background:#fff;color:#333;border:1px solid #ddd;text-decoration:none" href="${a.url}" target="_blank">Open ↗</a>`:''}
         <button class="fu-btn fu-cl" onclick="updateAppStatus(${a.id},'Rejected')">No reply — close</button>
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 function renderStats(data) {
-  const td=today();
+  const regionMap=buildRegionMap(data);
   const wa=data.apps.filter(a=>!EXCL.has(a.platform)&&new Date(a.date+'T12:00:00')>=weekStart());
   const replied=data.apps.filter(a=>['Replied','Interview','Offer'].includes(a.status)).length;
   const countable=data.apps.filter(a=>!EXCL.has(a.platform));
   const rateStr=countable.length>0?`${Math.round((replied/countable.length)*100)}%`:'—';
-
   document.getElementById('stats-grid').innerHTML=`
     <div class="sc"><div class="sc-n">${countable.length}</div><div class="sc-l">Total applied</div></div>
     <div class="sc"><div class="sc-n">${wa.length}</div><div class="sc-l">This week</div></div>
     <div class="sc"><div class="sc-n">${data.outreach?.length||0}</div><div class="sc-l">Direct outreach</div></div>
     <div class="sc"><div class="sc-n">${data.apps.filter(a=>a.status==='Replied').length}</div><div class="sc-l">Recruiter replies</div></div>
-    <div class="sc"><div class="sc-n">${data.apps.filter(a=>a.status==='Interview').length}</div><div class="sc-l">In interview process</div></div>
-    <div class="sc"><div class="sc-n">${data.apps.filter(a=>a.status==='Offer').length}</div><div class="sc-l">Offers received</div></div>
-  `;
-
-  // Daily activity — last 14 days
+    <div class="sc"><div class="sc-n">${data.apps.filter(a=>a.status==='Interview').length}</div><div class="sc-l">In interview</div></div>
+    <div class="sc"><div class="sc-n">${data.apps.filter(a=>a.status==='Offer').length}</div><div class="sc-l">Offers received</div></div>`;
   const totalTarget=Object.entries(data.targets).reduce((s,[p,v])=>s+(EXCL.has(p)?0:v),0);
   const dayEls=[];
   for(let i=0;i<14;i++){
@@ -1270,54 +1178,23 @@ function renderStats(data) {
     dayEls.push(`<div class="day-row">
       <span class="day-label" style="color:${isWeekend?'#bbb':'#555'}">${label}</span>
       <div class="day-bar-wrap"><div class="day-bar" style="width:${pct}%;background:${hit?'#2ECC71':count>0?'#6C63FF':'#f0f0f0'}"></div></div>
-      <span class="day-count" style="color:${hit?'#2ECC71':count>0?'#6C63FF':'#ccc'}">${count}${isWeekend&&count===0?'':''}</span>
-      <span class="day-tick">${hit?'✅':count>0&&!isWeekend?'':isWeekend?'':totalTarget>0?'':'—'}</span>
+      <span class="day-count" style="color:${hit?'#2ECC71':count>0?'#6C63FF':'#ccc'}">${count}</span>
+      <span class="day-tick">${hit?'✅':''}</span>
     </div>`);
   }
   document.getElementById('daily-activity').innerHTML=dayEls.join('');
-
-  // By platform
   const byPlat={};
   data.apps.forEach(a=>{byPlat[a.platform]=(byPlat[a.platform]||0)+1;});
   const sorted=Object.entries(byPlat).sort((a,b)=>b[1]-a[1]);
   const max=sorted[0]?.[1]||1;
   document.getElementById('stats-plat').innerHTML=sorted.length?sorted.map(([p,n])=>{
-    const r=REGION[p]||'other'; const c=COLOR[r];
+    const r=regionMap[p]||'other'; const c=COLOR[r];
     return `<div class="pw"><div class="pl"><span>${p}</span><span style="font-weight:700;color:${c}">${n}</span></div>
     <div class="pt"><div class="pf" style="width:${(n/max)*100}%;background:${c}"></div></div></div>`;
   }).join(''):'<div style="font-size:13px;color:#aaa;padding:6px 0">No data yet.</div>';
-
   document.getElementById('response-rate').innerHTML=countable.length<5
     ?'Log at least 5 applications to see your response rate.'
-    :`Out of <strong>${countable.length}</strong> applications, <strong>${replied}</strong> got a reply or interview — a <strong>${rateStr} response rate</strong>. A healthy benchmark is 5–10%. Below that, try adding more tailored cover notes.`;
-}
-
-function renderSettings(data) {
-  // Restore saved sync credentials
-  const cfg = loadSyncCfg();
-  const tkEl = document.getElementById('sync-token');
-  if (tkEl && cfg.token) tkEl.value = cfg.token;
-  const groups={
-    dubai:['LinkedIn Dubai','Naukrigulf','Bayt.com','Dubizzle Jobs','GulfTalent'],
-    nl:['LinkedIn Netherlands','Indeed Netherlands','WorkInHolland','Glassdoor NL','Expatica NL'],
-    remote:['Himalayas','Remote.co','LinkedIn Remote','Other Remote'],
-  };
-  Object.entries(groups).forEach(([region,platforms])=>{
-    document.getElementById('set-'+region).innerHTML=platforms.map(p=>`
-      <div class="sr">
-        <span class="sn">${p}</span>
-        <input class="si" type="number" min="0" max="99" id="t-${p.replace(/[\s.]/g,'-')}" value="${data.targets[p]??0}">
-      </div>`).join('');
-  });
-}
-
-function saveTargets() {
-  const data=load();
-  Object.keys(DFLT_TARGETS).forEach(p=>{
-    const el=document.getElementById('t-'+p.replace(/[\s.]/g,'-'));
-    if(el) data.targets[p]=parseInt(el.value)||0;
-  });
-  save(data); renderAll(); alert('Targets saved ✓');
+    :`Out of <strong>${countable.length}</strong> applications, <strong>${replied}</strong> got a reply — a <strong>${rateStr} response rate</strong>. A healthy benchmark is 5–10%.`;
 }
 
 function updateAppStatus(id,status) {
@@ -1341,311 +1218,217 @@ function importData(e) {
   const file=e.target.files[0]; if(!file) return;
   const reader=new FileReader();
   reader.onload=ev=>{
-    try {
-      const d=JSON.parse(ev.target.result);
-      if(d.apps&&d.targets){save(d);renderAll();alert('Data imported ✓');}
-      else alert('Invalid file format.');
-    } catch { alert('Could not read file.'); }
+    try{const d=JSON.parse(ev.target.result);if(d.apps&&d.targets){save(d);renderAll();alert('Data imported ✓');}else alert('Invalid file format.');}
+    catch{alert('Could not read file.');}
   };
   reader.readAsText(file); e.target.value='';
 }
 
 function clearAll() { localStorage.removeItem(KEY); renderAll(); }
 
-// ── Cloud Sync (GitHub API) ────────────────────────────────────────────────
-const SYNC_CFG_KEY = 'jsq_sync_cfg';
-const GH_OWNER = 'yasminee2000';
-const GH_REPO  = 'Job-Search';
-const GH_FILE  = 'sync-data.json';
-let _syncSha = null;
-let _syncDebounce = null;
+// ── Cloud Sync ──
+const SYNC_CFG_KEY='jsq_sync_cfg';
+const GH_OWNER='yasminee2000';
+const GH_REPO='Job-Search';
+const GH_FILE='sync-data.json';
+let _syncSha=null, _syncDebounce=null;
 
-function loadSyncCfg() {
-  try { return JSON.parse(localStorage.getItem(SYNC_CFG_KEY)) || {}; } catch { return {}; }
-}
+function loadSyncCfg() { try{return JSON.parse(localStorage.getItem(SYNC_CFG_KEY))||{};}catch{return {};} }
 
 function setSyncDot(state) {
-  const el = document.getElementById('syncDot');
-  if (!el) return;
-  const map = { ok:'☁️ synced', ing:'↻ syncing…', err:'⚠️ sync error', off:'' };
-  const cls = { ok:'sync-ok', ing:'sync-ing', err:'sync-err', off:'' };
-  el.textContent = map[state] || '';
-  el.className = 'sync-dot ' + (cls[state] || '');
+  const el=document.getElementById('syncDot'); if(!el) return;
+  const map={ok:'☁️ synced',ing:'↻ syncing…',err:'⚠️ sync error',off:''};
+  const cls={ok:'sync-ok',ing:'sync-ing',err:'sync-err',off:''};
+  el.textContent=map[state]||''; el.className='sync-dot '+(cls[state]||'');
 }
 
-function ghHeaders(token) {
-  return { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' };
-}
+function ghHeaders(token) { return{'Authorization':`token ${token}`,'Accept':'application/vnd.github.v3+json'}; }
 
 async function ghGet(token) {
-  try {
-    const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`, { headers: ghHeaders(token) });
-    if (res.status === 404) return null;
-    if (!res.ok) return undefined;
-    const json = await res.json();
-    _syncSha = json.sha;
+  try{
+    const res=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`,{headers:ghHeaders(token)});
+    if(res.status===404) return null;
+    if(!res.ok) return undefined;
+    const json=await res.json();
+    _syncSha=json.sha;
     return JSON.parse(decodeURIComponent(escape(atob(json.content.replace(/\n/g,'')))));
-  } catch { return undefined; }
+  }catch{return undefined;}
 }
 
-async function ghPut(token, data) {
-  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data))));
-  const body = { message: 'sync', content };
-  if (_syncSha) body.sha = _syncSha;
-  try {
-    const res = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`, {
-      method: 'PUT',
-      headers: { ...ghHeaders(token), 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
-    });
-    if (!res.ok) return false;
-    const json = await res.json();
-    _syncSha = json.content?.sha;
-    return true;
-  } catch { return false; }
+async function ghPut(token,data) {
+  const content=btoa(unescape(encodeURIComponent(JSON.stringify(data))));
+  const body={message:'sync',content};
+  if(_syncSha) body.sha=_syncSha;
+  try{
+    const res=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`,{
+      method:'PUT',headers:{...ghHeaders(token),'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!res.ok) return false;
+    const json=await res.json(); _syncSha=json.content?.sha; return true;
+  }catch{return false;}
 }
 
 async function pushToCloud(data) {
-  const cfg = loadSyncCfg();
-  if (!cfg.token) return;
+  const cfg=loadSyncCfg(); if(!cfg.token) return;
   clearTimeout(_syncDebounce);
-  _syncDebounce = setTimeout(async () => {
-    setSyncDot('ing');
-    const ok = await ghPut(cfg.token, data);
-    setSyncDot(ok ? 'ok' : 'err');
-  }, 3000);
+  _syncDebounce=setTimeout(async()=>{
+    setSyncDot('ing'); const ok=await ghPut(cfg.token,data); setSyncDot(ok?'ok':'err');
+  },3000);
 }
 
 async function initSync() {
-  const cfg = loadSyncCfg();
-  if (!cfg.token) return;
+  const cfg=loadSyncCfg(); if(!cfg.token) return;
   setSyncDot('ing');
-  const cloud = await ghGet(cfg.token);
-  if (cloud === undefined) { setSyncDot('err'); return; }
-  if (!cloud || !cloud.apps) { setSyncDot('ok'); return; }
-  const local = load();
-  if ((cloud._ts || 0) > (local._ts || 0)) {
-    localStorage.setItem(KEY, JSON.stringify(cloud));
-    renderAll();
-  }
+  const cloud=await ghGet(cfg.token);
+  if(cloud===undefined){setSyncDot('err');return;}
+  if(!cloud||!cloud.apps){setSyncDot('ok');return;}
+  const local=load();
+  if((cloud._ts||0)>(local._ts||0)){localStorage.setItem(KEY,JSON.stringify(cloud));renderAll();}
   setSyncDot('ok');
 }
 
 async function saveSyncConfig() {
-  const token = document.getElementById('sync-token').value.trim();
-  const msg   = document.getElementById('sync-config-msg');
-  if (!token) { msg.textContent = 'Vul je GitHub token in.'; msg.style.color = '#C06820'; return; }
-  msg.textContent = 'Verbinding testen…'; msg.style.color = '#888';
-  // Test token by checking repo access
-  const test = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}`, { headers: ghHeaders(token) });
-  if (!test.ok) {
-    msg.innerHTML = '⚠️ Token werkt niet. Controleer of je "repo" hebt aangevinkt bij het aanmaken.';
-    msg.style.color = '#C06820'; return;
-  }
-  localStorage.setItem(SYNC_CFG_KEY, JSON.stringify({ token }));
+  const token=document.getElementById('sync-token').value.trim();
+  const msg=document.getElementById('sync-config-msg');
+  if(!token){msg.textContent='Vul je GitHub token in.';msg.style.color='#C06820';return;}
+  msg.textContent='Verbinding testen…';msg.style.color='#888';
+  const test=await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}`,{headers:ghHeaders(token)});
+  if(!test.ok){msg.innerHTML='⚠️ Token werkt niet. Controleer of je "repo" hebt aangevinkt.';msg.style.color='#C06820';return;}
+  localStorage.setItem(SYNC_CFG_KEY,JSON.stringify({token}));
   setSyncDot('ing');
-  // Pull first (to get SHA), then push local data
-  const cloud = await ghGet(token);
-  const local = load();
-  const winner = cloud && (cloud._ts||0) > (local._ts||0) ? cloud : local;
-  winner._ts = Date.now();
-  localStorage.setItem(KEY, JSON.stringify(winner));
-  const ok = await ghPut(token, winner);
-  renderAll();
-  setSyncDot(ok ? 'ok' : 'err');
-  msg.innerHTML = ok
-    ? '✓ Verbonden &amp; gesynchroniseerd! Doe hetzelfde op je telefoon met hetzelfde token.'
-    : '⚠️ Token opgeslagen maar kon niet synchroniseren. Probeer opnieuw.';
-  msg.style.color = ok ? '#1A7A42' : '#C06820';
+  const cloud=await ghGet(token); const local=load();
+  const winner=cloud&&(cloud._ts||0)>(local._ts||0)?cloud:local;
+  winner._ts=Date.now(); localStorage.setItem(KEY,JSON.stringify(winner));
+  const ok=await ghPut(token,winner); renderAll(); setSyncDot(ok?'ok':'err');
+  msg.innerHTML=ok?'✓ Verbonden! Doe hetzelfde op je telefoon met hetzelfde token.':'⚠️ Token opgeslagen maar kon niet synchroniseren. Probeer opnieuw.';
+  msg.style.color=ok?'#1A7A42':'#C06820';
 }
 
-// ── Vacatures (Today's Jobs) ────────────────────────────────────────────────
-let _vacJobs = []; // module-level store so onclick can reference by index
-
-const DEFAULT_QUERIES = [
-  'Account Manager', 'Legal Assistant', 'Executive Assistant',
-  'Customer Success Manager', 'Operations Coordinator', 'Paralegal'
-];
+// ── Vacatures ──
+let _vacJobs=[];
+const DEFAULT_QUERIES=['Account Manager','Legal Assistant','Executive Assistant','Customer Success Manager','Operations Coordinator','Paralegal'];
 
 function getTopJobTitles() {
-  const data = load();
-  if (!data.apps || !data.apps.length) return DEFAULT_QUERIES.slice(0, 3);
-  const freq = {};
-  data.apps.forEach(a => {
-    if (a.title) {
-      const t = a.title.split(' ').slice(0, 3).join(' ');
-      freq[t] = (freq[t] || 0) + 1;
-    }
-  });
-  const sorted = Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([t])=>t);
-  return sorted.length ? sorted : DEFAULT_QUERIES.slice(0, 3);
+  const data=load();
+  if(!data.apps||!data.apps.length) return DEFAULT_QUERIES.slice(0,3);
+  const freq={};
+  data.apps.forEach(a=>{if(a.title){const t=a.title.split(' ').slice(0,3).join(' ');freq[t]=(freq[t]||0)+1;}});
+  const sorted=Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([t])=>t);
+  return sorted.length?sorted:DEFAULT_QUERIES.slice(0,3);
 }
 
 async function fetchRemotiveJobs(queries) {
-  const results = [];
-  for (const q of queries.slice(0, 2)) {
-    try {
-      const res = await fetch(`https://remotive.com/api/remote-jobs?search=${encodeURIComponent(q)}&limit=6`);
-      if (!res.ok) continue;
-      const json = await res.json();
-      (json.jobs || []).forEach(j => results.push({
-        id: 'rem-' + j.id,
-        title: j.title,
-        company: j.company_name,
-        location: j.candidate_required_location || 'Remote / Worldwide',
-        url: j.url,
-        source: 'Remotive',
-        region: 'remote',
-      }));
-    } catch {}
+  const results=[];
+  for(const q of queries.slice(0,2)){
+    try{
+      const res=await fetch(`https://remotive.com/api/remote-jobs?search=${encodeURIComponent(q)}&limit=6`);
+      if(!res.ok) continue;
+      const json=await res.json();
+      (json.jobs||[]).forEach(j=>results.push({id:'rem-'+j.id,title:j.title,company:j.company_name,location:j.candidate_required_location||'Remote / Worldwide',url:j.url,source:'Remotive',region:'remote'}));
+    }catch{}
   }
   return results;
 }
 
 async function fetchArbeitnowJobs(queries) {
-  const results = [];
-  try {
-    // Arbeitnow: free European job board, no key needed
-    const res = await fetch('https://www.arbeitnow.com/api/job-board-api?page=1');
-    if (!res.ok) return results;
-    const json = await res.json();
-    const lowerQ = queries.map(q=>q.toLowerCase());
-    (json.data || []).forEach(j => {
-      const titleLower = (j.title||'').toLowerCase();
-      const tagStr = (j.tags||[]).join(' ').toLowerCase();
-      const matches = lowerQ.some(q => q.split(' ').some(word => word.length>3 && (titleLower.includes(word)||tagStr.includes(word))));
-      if (matches) results.push({
-        id: 'arb-' + j.slug,
-        title: j.title,
-        company: j.company_name,
-        location: j.location || 'Europe / Remote',
-        url: j.url,
-        source: 'Arbeitnow',
-        region: (j.location||'').toLowerCase().includes('netherlands')||
-                (j.location||'').toLowerCase().includes('nederland')||
-                (j.location||'').toLowerCase().includes('amsterdam') ? 'nl' : 'remote',
-      });
+  const results=[];
+  try{
+    const res=await fetch('https://www.arbeitnow.com/api/job-board-api?page=1');
+    if(!res.ok) return results;
+    const json=await res.json();
+    const lowerQ=queries.map(q=>q.toLowerCase());
+    (json.data||[]).forEach(j=>{
+      const titleLower=(j.title||'').toLowerCase();
+      const tagStr=(j.tags||[]).join(' ').toLowerCase();
+      const matches=lowerQ.some(q=>q.split(' ').some(word=>word.length>3&&(titleLower.includes(word)||tagStr.includes(word))));
+      if(matches) results.push({id:'arb-'+j.slug,title:j.title,company:j.company_name,location:j.location||'Europe / Remote',url:j.url,source:'Arbeitnow',
+        region:(j.location||'').toLowerCase().includes('netherlands')||(j.location||'').toLowerCase().includes('amsterdam')?'nl':'remote'});
     });
-  } catch {}
+  }catch{}
   return results;
 }
 
 async function loadTodaysJobs(forceRefresh=false) {
-  const list = document.getElementById('vac-list');
-  const lastEl = document.getElementById('vac-last-updated');
-  if (!list) return;
-
-  list.innerHTML = `<div class="card" style="text-align:center;padding:28px 16px;color:#aaa"><div style="font-size:32px;margin-bottom:8px">🔍</div><div style="font-size:13px">Vacatures laden…</div></div>`;
-  if(lastEl) lastEl.textContent = '';
-
-  const queries = getTopJobTitles();
-  const data = load();
-  const loggedUrls = new Set((data.apps || []).map(a=>a.url).filter(Boolean));
-
-  // Fetch from free sources in parallel
-  const [remotive, arbeitnow] = await Promise.all([
-    fetchRemotiveJobs(queries),
-    fetchArbeitnowJobs(queries),
-  ]);
-
-  let jobs = [...remotive, ...arbeitnow];
-
-  // De-dupe by id
-  const seen = new Set();
-  jobs = jobs.filter(j => { if(seen.has(j.id)) return false; seen.add(j.id); return true; });
-
-  if (!jobs.length) {
-    list.innerHTML = `<div class="card"><div class="empty">
-      <div class="ei">😕</div>
-      <div class="et">Geen vacatures gevonden op dit moment.<br>
-      <span style="font-size:12px;display:block;margin-top:6px;color:#888">Zoekopdrachten: ${queries.join(', ')}</span>
-      <span style="font-size:12px;display:block;margin-top:4px;">Gebruik de zoeklinks hieronder voor Dubai &amp; NL vacatures.</span>
-      </div>
-    </div></div>`;
+  const list=document.getElementById('vac-list');
+  const lastEl=document.getElementById('vac-last-updated');
+  if(!list) return;
+  list.innerHTML=`<div class="card" style="text-align:center;padding:28px 16px;color:#aaa"><div style="font-size:32px;margin-bottom:8px">🔍</div><div style="font-size:13px">Vacatures laden…</div></div>`;
+  if(lastEl) lastEl.textContent='';
+  const queries=getTopJobTitles();
+  const data=load();
+  const loggedUrls=new Set((data.apps||[]).map(a=>a.url).filter(Boolean));
+  const [remotive,arbeitnow]=await Promise.all([fetchRemotiveJobs(queries),fetchArbeitnowJobs(queries)]);
+  let jobs=[...remotive,...arbeitnow];
+  const seen=new Set();
+  jobs=jobs.filter(j=>{if(seen.has(j.id))return false;seen.add(j.id);return true;});
+  if(!jobs.length){
+    list.innerHTML=`<div class="card"><div class="empty"><div class="ei">😕</div><div class="et">Geen vacatures gevonden.<br><span style="font-size:12px;display:block;margin-top:6px">Gebruik de zoeklinks hieronder voor Dubai &amp; NL vacatures.</span></div></div></div>`;
   } else {
-    _vacJobs = jobs;
-    list.innerHTML = jobs.map((j, idx) => {
-      const alreadyLogged = j.url && loggedUrls.has(j.url);
-      const col = COLOR[j.region] || '#888';
-      const srcBg = j.region==='remote'?'#E6F9EE':j.region==='nl'?'#EEF2FF':'#FFF0E8';
+    _vacJobs=jobs;
+    list.innerHTML=jobs.map((j,idx)=>{
+      const alreadyLogged=j.url&&loggedUrls.has(j.url);
+      const col=COLOR[j.region]||'#888';
+      const srcBg=j.region==='remote'?'#E6F9EE':j.region==='nl'?'#EEF2FF':'#FFF0E8';
       return `<div class="jc">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
-          <div style="flex:1;min-width:0">
-            <div class="jc-title">${j.title}</div>
-            <div class="jc-meta">${[j.company,j.location].filter(Boolean).join(' · ')}</div>
-          </div>
+          <div style="flex:1;min-width:0"><div class="jc-title">${j.title}</div><div class="jc-meta">${[j.company,j.location].filter(Boolean).join(' · ')}</div></div>
           <span class="jc-source" style="background:${srcBg};color:${col}">${j.source}</span>
         </div>
         <div class="jc-acts">
           ${j.url?`<a href="${j.url}" target="_blank" class="jc-link">Open ↗</a>`:''}
-          ${alreadyLogged
-            ? `<span class="jc-logged">✓ Al gelogd</span>`
-            : `<button class="jc-log" onclick="prefillJobApp(${idx})">+ Log &amp; Solliciteer</button>`
-          }
+          ${alreadyLogged?`<span class="jc-logged">✓ Al gelogd</span>`:`<button class="jc-log" onclick="prefillJobApp(${idx})">+ Log &amp; Solliciteer</button>`}
         </div>
       </div>`;
     }).join('');
   }
-
-  if(lastEl) {
-    const now = new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
-    lastEl.textContent = `Ververst om ${now} · ${jobs.length} vacatures · Zoekopdrachten: ${queries.join(', ')}`;
+  if(lastEl){
+    const now=new Date().toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
+    lastEl.textContent=`Ververst om ${now} · ${jobs.length} vacatures · Zoekopdrachten: ${queries.join(', ')}`;
   }
-
-  // Render quick-search links
   renderQuickSearchLinks(queries);
 }
 
 function renderQuickSearchLinks(queries) {
-  const q = encodeURIComponent(queries[0] || 'Account Manager');
-  const q2 = encodeURIComponent(queries[1] || 'Executive Assistant');
-
-  const dubaiLinks = [
-    { label: 'LinkedIn — ' + queries[0], url: `https://www.linkedin.com/jobs/search/?keywords=${q}&location=Dubai%2C+United+Arab+Emirates`, platform: 'LinkedIn Dubai' },
-    { label: 'LinkedIn — ' + (queries[1]||'Executive Assistant'), url: `https://www.linkedin.com/jobs/search/?keywords=${q2}&location=Dubai%2C+United+Arab+Emirates`, platform: 'LinkedIn Dubai' },
-    { label: 'Bayt.com', url: `https://www.bayt.com/en/international/jobs/?q=${q}&l=dubai`, platform: 'Bayt.com' },
-    { label: 'Naukrigulf', url: `https://www.naukrigulf.com/${encodeURIComponent((queries[0]||'account-manager').toLowerCase().replace(/ /g,'-'))}-jobs-in-uae`, platform: 'Naukrigulf' },
-    { label: 'GulfTalent', url: `https://www.gulftalent.com/jobs/search?search=${q}&country=United+Arab+Emirates`, platform: 'GulfTalent' },
-    { label: 'Dubizzle Jobs', url: `https://dubizzle.com/jobs/?search=${q}`, platform: 'Dubizzle Jobs' },
+  const q=encodeURIComponent(queries[0]||'Account Manager');
+  const q2=encodeURIComponent(queries[1]||'Executive Assistant');
+  const dubaiLinks=[
+    {label:'LinkedIn — '+queries[0],url:`https://www.linkedin.com/jobs/search/?keywords=${q}&location=Dubai%2C+United+Arab+Emirates`},
+    {label:'LinkedIn — '+(queries[1]||'Executive Assistant'),url:`https://www.linkedin.com/jobs/search/?keywords=${q2}&location=Dubai%2C+United+Arab+Emirates`},
+    {label:'Bayt.com',url:`https://www.bayt.com/en/international/jobs/?q=${q}&l=dubai`},
+    {label:'Naukrigulf',url:`https://www.naukrigulf.com/${encodeURIComponent((queries[0]||'account-manager').toLowerCase().replace(/ /g,'-'))}-jobs-in-uae`},
+    {label:'GulfTalent',url:`https://www.gulftalent.com/jobs/search?search=${q}&country=United+Arab+Emirates`},
+    {label:'Dubizzle Jobs',url:`https://dubizzle.com/jobs/?search=${q}`},
   ];
-
-  const nlLinks = [
-    { label: 'LinkedIn — ' + queries[0], url: `https://www.linkedin.com/jobs/search/?keywords=${q}&location=Nederland`, platform: 'LinkedIn Netherlands' },
-    { label: 'LinkedIn — ' + (queries[1]||'Executive Assistant'), url: `https://www.linkedin.com/jobs/search/?keywords=${q2}&location=Nederland`, platform: 'LinkedIn Netherlands' },
-    { label: 'Indeed NL', url: `https://nl.indeed.com/jobs?q=${q}&l=Nederland`, platform: 'Indeed Netherlands' },
-    { label: 'WorkInHolland', url: `https://www.workinholland.nl/vacatures/?search=${q}`, platform: 'WorkInHolland' },
-    { label: 'Glassdoor NL', url: `https://www.glassdoor.nl/Vacature/index.htm?sc.keyword=${q}`, platform: 'Glassdoor NL' },
+  const nlLinks=[
+    {label:'LinkedIn — '+queries[0],url:`https://www.linkedin.com/jobs/search/?keywords=${q}&location=Nederland`},
+    {label:'Indeed NL',url:`https://nl.indeed.com/jobs?q=${q}&l=Nederland`},
+    {label:'WorkInHolland',url:`https://www.workinholland.nl/vacatures/?search=${q}`},
+    {label:'Glassdoor NL',url:`https://www.glassdoor.nl/Vacature/index.htm?sc.keyword=${q}`},
   ];
-
-  const makeLink = (item) => `
-    <a href="${item.url}" target="_blank"
-      style="display:flex;align-items:center;justify-content:space-between;text-decoration:none;
-             padding:10px 13px;background:#fafafa;border:1.5px solid #efefef;border-radius:10px;
-             font-size:13px;font-weight:500;color:var(--text);gap:8px;">
+  const makeLink=item=>`
+    <a href="${item.url}" target="_blank" style="display:flex;align-items:center;justify-content:space-between;text-decoration:none;padding:10px 13px;background:#fafafa;border:1.5px solid #efefef;border-radius:10px;font-size:13px;font-weight:500;color:var(--text);gap:8px;">
       <span style="flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${item.label}</span>
       <span style="font-size:11px;color:#6C63FF;font-weight:700;flex-shrink:0;">Zoeken ↗</span>
     </a>`;
-
-  const dubaiEl = document.getElementById('vac-links-dubai');
-  const nlEl = document.getElementById('vac-links-nl');
-  if(dubaiEl) dubaiEl.innerHTML = dubaiLinks.map(makeLink).join('');
-  if(nlEl) nlEl.innerHTML = nlLinks.map(makeLink).join('');
+  const dubaiEl=document.getElementById('vac-links-dubai');
+  const nlEl=document.getElementById('vac-links-nl');
+  if(dubaiEl) dubaiEl.innerHTML=dubaiLinks.map(makeLink).join('');
+  if(nlEl) nlEl.innerHTML=nlLinks.map(makeLink).join('');
 }
 
 function prefillJobApp(idx) {
-  const j = _vacJobs[idx];
-  if (!j) return;
+  const j=_vacJobs[idx]; if(!j) return;
   clearAppForm();
-  editingAppId = null;
-  document.getElementById('f-url').value = j.url || '';
-  document.getElementById('f-title').value = j.title || '';
-  document.getElementById('f-company').value = j.company || '';
-  const srcPlatMap = { 'Remotive':'Other Remote', 'Arbeitnow': j.region==='nl'?'LinkedIn Netherlands':'Other Remote' };
-  document.getElementById('f-platform').value = srcPlatMap[j.source] || (j.region==='nl'?'LinkedIn Netherlands':'Other Remote');
-  document.getElementById('app-modal-title').textContent = 'Log Application';
-  document.getElementById('app-submit-btn').textContent = '✓ Log Application';
+  editingAppId=null;
+  document.getElementById('f-platform').innerHTML=buildPlatformOptions();
+  document.getElementById('f-url').value=j.url||'';
+  document.getElementById('f-title').value=j.title||'';
+  document.getElementById('f-company').value=j.company||'';
+  const srcPlatMap={'Remotive':'Other Remote','Arbeitnow':j.region==='nl'?'LinkedIn Netherlands':'Other Remote'};
+  document.getElementById('f-platform').value=srcPlatMap[j.source]||(j.region==='nl'?'LinkedIn Netherlands':'Other Remote');
+  document.getElementById('app-modal-title').textContent='Log Application';
+  document.getElementById('app-submit-btn').textContent='✓ Log Application';
   document.getElementById('appOv').classList.add('open');
-  setTimeout(()=>document.getElementById('f-title').focus(), 100);
+  setTimeout(()=>document.getElementById('f-title').focus(),100);
 }
 
 renderAll();
