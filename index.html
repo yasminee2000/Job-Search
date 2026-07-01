@@ -191,6 +191,37 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
     <div class="sum-box"><span class="sum-n" id="s-week">0</span><span class="sum-l">This Week</span></div>
   </div>
 
+  <!-- Week chart -->
+  <div class="card" style="margin-bottom:12px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+      <span style="font-size:13px;font-weight:700;">📊 Sollicitaties per dag</span>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <button id="chart-prev" onclick="changeWeek(-1)" style="width:28px;height:28px;border-radius:50%;border:1.5px solid #e0e0e0;background:#fff;font-size:12px;cursor:pointer;">◄</button>
+        <span id="week-label" style="font-size:11.5px;color:#555;min-width:116px;text-align:center;font-weight:600;"></span>
+        <button id="chart-next" onclick="changeWeek(1)" style="width:28px;height:28px;border-radius:50%;border:1.5px solid #e0e0e0;background:#fff;font-size:12px;cursor:pointer;">►</button>
+      </div>
+    </div>
+    <div style="display:flex;gap:16px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #f5f5f5;">
+      <div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#bbb;margin-bottom:3px;">Vandaag</div>
+        <div style="display:flex;align-items:baseline;gap:4px;">
+          <span id="chart-today-n" style="font-size:24px;font-weight:800;color:#1C1C2E;">0</span>
+          <span id="chart-today-t" style="font-size:13px;color:#bbb;">/ —</span>
+        </div>
+      </div>
+      <div style="width:1px;background:#f0f0f0;"></div>
+      <div>
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#bbb;margin-bottom:3px;">Deze week</div>
+        <div style="display:flex;align-items:baseline;gap:4px;">
+          <span id="chart-week-n" style="font-size:24px;font-weight:800;color:#1C1C2E;">0</span>
+          <span id="chart-week-t" style="font-size:13px;color:#bbb;">/ —</span>
+        </div>
+      </div>
+    </div>
+    <div id="week-bars" style="display:flex;height:90px;gap:3px;"></div>
+    <div style="display:flex;margin-top:5px;gap:3px;" id="week-day-labels"></div>
+  </div>
+
   <!-- Edit button row -->
   <div style="display:flex;justify-content:flex-end;margin-bottom:10px;">
     <button onclick="toggleEditMode()" id="editPlatBtn"
@@ -234,8 +265,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       <div class="rh"><span class="rt" style="color:var(--remote)">🌍 Remote</span><span class="rc" id="rem-c" style="color:var(--remote)">0/—</span></div>
       <div id="rem-bars"></div>
     </div>
+    <div class="card" id="other-card" style="display:none">
+      <div class="rh"><span class="rt" style="color:var(--other)">🏢 Direct / Overig</span><span class="rc" id="other-c" style="color:var(--other)">0</span></div>
+      <div id="other-bars"></div>
+    </div>
     <div class="card" style="padding:12px 14px;">
-      <p style="font-size:12px;color:var(--muted);line-height:1.55"><strong style="color:var(--text)">Tip:</strong> Referrals en recruiter outreach tellen niet mee voor je dagelijks doel. Log ze in het <strong>Outreach</strong> tabblad.</p>
+      <p style="font-size:12px;color:var(--muted);line-height:1.55"><strong style="color:var(--text)">Tip:</strong> Referrals en recruiter outreach tellen niet mee voor je dagelijks doel. Direct op bedrijfssite solliciteren telt wél mee.</p>
     </div>
   </div>
 </div>
@@ -435,7 +470,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 
 <script>
 const KEY = 'jsq_v3';
-const EXCL = new Set(['Referral','Recruiter Reached Out','Company Direct']);
+const EXCL = new Set(['Referral','Recruiter Reached Out']); // Company Direct now counts toward daily total
 const COLOR = { dubai:'#FF6B35', nl:'#6C63FF', remote:'#2ECC71', other:'#888' };
 const SL = { Applied:'Applied', Replied:'Replied ✓', Interview:'In Progress 🔄', FollowUp:'Following up', Rejected:'Rejected', Offer:'Offer 🎉' };
 const STAGE_TYPES = ['Phone Screen','Video Interview','In-Person Interview','Technical Test','Assessment / Task','Panel Interview','Final Interview','Reference Check','Offer Discussion'];
@@ -526,6 +561,77 @@ function calcStreak(data) {
     if(diff<=1){streak++;check=d;}
   }
   return streak;
+}
+
+// ── Week Chart ──
+let _weekOffset = 0;
+
+function changeWeek(dir) {
+  _weekOffset = Math.min(0, _weekOffset + dir);
+  renderWeekChart(load());
+}
+
+function getWeekDates(offset) {
+  const now = new Date(); now.setHours(0,0,0,0);
+  const wd = now.getDay();
+  const monday = new Date(now);
+  monday.setDate(now.getDate() + (wd===0?-6:1-wd) + offset*7);
+  return Array.from({length:7}, (_,i) => { const d=new Date(monday); d.setDate(monday.getDate()+i); return d; });
+}
+
+function renderWeekChart(data) {
+  const days = getWeekDates(_weekOffset);
+  const totalTarget = Object.entries(data.targets).reduce((s,[p,v])=>s+(EXCL.has(p)?0:v),0);
+  const now = new Date(); now.setHours(0,0,0,0);
+  const todayStr = now.toISOString().slice(0,10);
+
+  // Week label
+  const fmt = d => d.toLocaleDateString('nl-NL',{day:'numeric',month:'short'});
+  document.getElementById('week-label').textContent = `${fmt(days[0])} – ${fmt(days[6])}`;
+
+  // Counts per day
+  let weekTotal = 0;
+  const dayCounts = days.map(d => {
+    const ds = d.toISOString().slice(0,10);
+    const count = data.apps.filter(a=>a.date===ds&&!EXCL.has(a.platform)).length;
+    weekTotal += count;
+    return { ds, count, isToday: ds===todayStr, isFuture: d>now };
+  });
+
+  const todayCount = dayCounts.find(d=>d.isToday)?.count || 0;
+  const weeklyTarget = totalTarget * 5; // Mon–Fri
+  document.getElementById('chart-today-n').textContent = todayCount;
+  document.getElementById('chart-today-n').style.color = todayCount>=totalTarget&&totalTarget>0?'#2ECC71':'#1C1C2E';
+  document.getElementById('chart-today-t').textContent = '/ '+(totalTarget||'—');
+  document.getElementById('chart-week-n').textContent = weekTotal;
+  document.getElementById('chart-week-n').style.color = weekTotal>=weeklyTarget&&weeklyTarget>0?'#2ECC71':'#1C1C2E';
+  document.getElementById('chart-week-t').textContent = '/ '+(weeklyTarget||'—');
+
+  // Arrow state
+  document.getElementById('chart-next').style.opacity = _weekOffset>=0?'0.25':'1';
+  document.getElementById('chart-next').disabled = _weekOffset>=0;
+
+  // Bars
+  const maxCount = Math.max(...dayCounts.map(d=>d.count), totalTarget||1, 1);
+  const DAY_NL = ['ma','di','wo','do','vr','za','zo'];
+
+  document.getElementById('week-bars').innerHTML = dayCounts.map((d,i) => {
+    const pct = (d.count/maxCount)*100;
+    const tPct = Math.min((totalTarget/maxCount)*100, 100);
+    const col = d.count>=totalTarget&&totalTarget>0?'#2ECC71':d.isToday?'#6C63FF':'#1C1C2E';
+    const opacity = d.isFuture?'0.12':'1';
+    return `<div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;height:100%;">
+      <div style="position:absolute;bottom:0;left:0;right:0;top:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;">
+        ${totalTarget>0?`<div style="position:absolute;bottom:${tPct}%;left:0;right:0;height:1.5px;background:#e8e8e8;"></div>`:''}
+        <div style="font-size:10px;font-weight:700;color:${d.count>0?col:'transparent'};margin-bottom:2px;position:absolute;bottom:${pct+2}%;white-space:nowrap;">${d.count>0?d.count:''}</div>
+        <div style="width:75%;height:${Math.max(pct,0)}%;background:${col};opacity:${opacity};border-radius:3px 3px 0 0;min-height:${d.count>0?'3px':'0'};transition:height .3s ease;"></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('week-day-labels').innerHTML = dayCounts.map((d,i) =>
+    `<div style="flex:1;text-align:center;font-size:10px;font-weight:${d.isToday?'800':'500'};color:${d.isToday?'#1C1C2E':'#bbb'};">${DAY_NL[i]}</div>`
+  ).join('');
 }
 
 // ── Page nav ──
@@ -973,9 +1079,11 @@ function renderAll() {
   document.getElementById('s-target').textContent=totalTarget||'—';
   document.getElementById('s-week').textContent=weekApps.length;
 
+  renderWeekChart(data);
   renderRegion('dubai','dub',data,todayApps);
   renderRegion('nl','nl',data,todayApps);
   renderRegion('remote','rem',data,todayApps);
+  renderOtherRegion(data,todayApps);
   renderLog(data);
   renderOutreach(data);
   renderFollowups(data);
@@ -1003,6 +1111,30 @@ function renderRegion(region,prefix,data,todayApps) {
   if(!html) html=`<div style="font-size:12px;color:#bbb;padding:4px 0">Geen actieve targets — klik ✏️ om platforms in te stellen.</div>`;
   document.getElementById(prefix+'-bars').innerHTML=html;
   document.getElementById(prefix+'-c').textContent=`${done}/${target}`;
+}
+
+function renderOtherRegion(data, todayApps) {
+  // Show apps that don't belong to dubai/nl/remote (e.g. Company Direct, unknown platforms)
+  const regionMap = buildRegionMap(data);
+  const otherApps = todayApps.filter(a => {
+    const r = a.region || regionMap[a.platform] || 'other';
+    return r === 'other';
+  });
+  const card = document.getElementById('other-card');
+  const barsEl = document.getElementById('other-bars');
+  const countEl = document.getElementById('other-c');
+  if (!otherApps.length) {
+    card.style.display = 'none';
+    return;
+  }
+  card.style.display = 'block';
+  countEl.textContent = `${otherApps.length}`;
+  // Group by platform
+  const byPlat = {};
+  otherApps.forEach(a => { byPlat[a.platform] = (byPlat[a.platform]||0)+1; });
+  barsEl.innerHTML = Object.entries(byPlat).map(([p,n]) =>
+    `<div class="pw"><div class="pl"><span>${p}</span><span style="color:var(--other);font-weight:700">${n}</span></div></div>`
+  ).join('');
 }
 
 function renderLog(data) {
